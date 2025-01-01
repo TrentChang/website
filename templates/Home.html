@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Team 7636</title>
-        <link rel="icon" href="{{ url_for('static', filename='images/teamicon.jpg') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}" />
-    </head>
-<body>
-    <img src="{{ url_for('static', filename='images/teamicon.jpg') }}" width="100" height="100" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Team 7636</title>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/teamicon.jpg') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/Home.css') }}"
+    />
+  </head>
+  <body>
+    <img
+      src="{{ url_for('static', filename='images/teamicon.jpg') }}"
+      width="100"
+      height="100"
+    />
     <span class="text">FRC 7636 ROBOMANIA</span>
     <nav class="navbar">
-    <ul>
+      <ul>
+        <li>
+          <a
+            href="https://www.instagram.com/frc7636_robomania?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            >MEDIA</a
+          >
+        </li>
         <li><a>CONTACT</a></li>
         <li><a>ABOUT</a></li>
         <li><a>HOME</a></li>
-        <li><a href="{{ url_for('login') }}">login</a></li>
-    </ul>
+      </ul>
     </nav>
-</body>
+    <a href="{{ url_for('login') }}" target="_blank"
+      ><button class="button">LOGIN</button></a
+    >
+  </body>
 </html>
