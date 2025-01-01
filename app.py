@@ -5,7 +5,11 @@ app = Flask(__name__)
 # 根路徑，渲染 HTML 模板
 @app.route('/')
 def home():
-    return render_template('Home.html')
+    return render_template('home.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 # 用來提供靜態檔案
 @app.route('/static/<path:filename>')
