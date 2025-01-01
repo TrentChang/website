@@ -1,7 +1,35 @@
 body {
-  background-color: hsl(214, 98%, 19%);
+  background-color: #012a60;
+  margin: 0px;
 }
-h1 {
+.text {
+  color: white;
+  margin-left: 10px;
+  font-family: "TT Autonimous", sans-serif;
+  font-size: 2.5rem;
+}
+.img {
+  vertical-align: middle;
+}
+.navbar ul {
+  list-style-type: none;
+  background-color: #012a60;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  top: 0px;
+}
+.navbar a {
   color: white;
   font-family: Lato, Charcoal, sans-serif;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: #024296;
+}
+.navbar li {
+  float: right;
 }
