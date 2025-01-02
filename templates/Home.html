@@ -15,81 +15,91 @@
       src="https://kit.fontawesome.com/9ab4af5272.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Toxigenesis&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav id="navbar">
-      <ul class="navbar-items flexbox-col">
-        <li class="navbar-logo flexbox-left">
-          <h3 id="text">FRC7636</h3>
-        </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
-              <ion-icon name="search-outline"></ion-icon>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#">FRC 7636 ROBOMANIA</a></div>
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="close-btn" />
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"
+            ><i class="fas fa-times"></i
+          ></label>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li>
+            <a href="#" class="desktop-item">Dropdown Menu</a>
+            <input type="checkbox" id="showDrop" />
+            <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+            <ul class="drop-menu">
+              <li><a href="#">Drop menu 1</a></li>
+              <li><a href="#">Drop menu 2</a></li>
+              <li><a href="#">Drop menu 3</a></li>
+              <li><a href="#">Drop menu 4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-item">Mega Menu</a>
+            <input type="checkbox" id="showMega" />
+            <label for="showMega" class="mobile-item">Mega Menu</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <img
+                    src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="row">
+                  <header>Design Services</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Graphics</a></li>
+                    <li><a href="#">Vectors</a></li>
+                    <li><a href="#">Business cards</a></li>
+                    <li><a href="#">Custom logo</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Email Services</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Personal Email</a></li>
+                    <li><a href="#">Business Email</a></li>
+                    <li><a href="#">Mobile Email</a></li>
+                    <li><a href="#">Web Marketing</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Security services</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Site Seal</a></li>
+                    <li><a href="#">VPS Hosting</a></li>
+                    <li><a href="#">Privacy Seal</a></li>
+                    <li><a href="#">Website design</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <span class="link-text">Search</span>
-          </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
-              <ion-icon name="home-outline"></ion-icon>
-            </div>
-            <span class="link-text">Home</span>
-          </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
-              <ion-icon name="folder-open-outline"></ion-icon>
-            </div>
-            <span class="link-text">Projects</span>
-          </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
-              <ion-icon name="pie-chart-outline"></ion-icon>
-            </div>
-            <span class="link-text">Dashboard</span>
-          </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
-              <ion-icon name="people-outline"></ion-icon>
-            </div>
-            <span class="link-text">Team</span>
-          </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
-              <ion-icon name="chatbubbles-outline"></ion-icon>
-            </div>
-            <span class="link-text">Support</span>
-          </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
-              <ion-icon name="settings-outline"></ion-icon>
-            </div>
-            <span class="link-text">Settings</span>
-          </a>
-        </li>
-      </ul>
+          </li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"
+          ><i class="fas fa-bars"></i
+        ></label>
+      </div>
     </nav>
-    <main id="main" class="flexbox-col">
-      <h2>Lorem ipsum!</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum corporis,
-        rerum doloremque iste sed voluptates omnis molestias molestiae animi
-        recusandae labore sit amet delectus ad necessitatibus laudantium qui!
-        Magni quisquam illum quaerat necessitatibus sint quibusdam perferendis!
-        Aut ipsam cumque deleniti error perspiciatis iusto accusamus
-        consequuntur assumenda. Obcaecati minima sed natus?
-      </p>
-    </main>
+
+    <div class="body-text">
+      <div class="title">Responsive Dropdown and Mega Menu</div>
+      <div class="sub-title">using only HTML & CSS</div>
+    </div>
   </body>
 </html>
