@@ -11,30 +11,85 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/Home.css') }}"
     />
+    <script
+      src="https://kit.fontawesome.com/9ab4af5272.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <img
-      src="{{ url_for('static', filename='images/teamicon.jpg') }}"
-      width="100"
-      height="100"
-    />
-    <span class="text">FRC 7636 ROBOMANIA</span>
-    <nav class="navbar">
-      <ul>
-        <li>
-          <a
-            href="https://www.instagram.com/frc7636_robomania?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-            target="_blank"
-            >MEDIA</a
-          >
+    <nav id="navbar">
+      <ul class="navbar-items flexbox-col">
+        <li class="navbar-logo flexbox-left">
+          <h3 id="text">FRC7636</h3>
         </li>
-        <li><a>CONTACT</a></li>
-        <li><a>ABOUT</a></li>
-        <li><a>HOME</a></li>
+        <li class="navbar-item flexbox-left">
+          <a class="navbar-item-inner flexbox-left">
+            <div class="navbar-item-inner-icon-wrapper flexbox">
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <span class="link-text">Search</span>
+          </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+          <a class="navbar-item-inner flexbox-left">
+            <div class="navbar-item-inner-icon-wrapper flexbox">
+              <ion-icon name="home-outline"></ion-icon>
+            </div>
+            <span class="link-text">Home</span>
+          </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+          <a class="navbar-item-inner flexbox-left">
+            <div class="navbar-item-inner-icon-wrapper flexbox">
+              <ion-icon name="folder-open-outline"></ion-icon>
+            </div>
+            <span class="link-text">Projects</span>
+          </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+          <a class="navbar-item-inner flexbox-left">
+            <div class="navbar-item-inner-icon-wrapper flexbox">
+              <ion-icon name="pie-chart-outline"></ion-icon>
+            </div>
+            <span class="link-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+          <a class="navbar-item-inner flexbox-left">
+            <div class="navbar-item-inner-icon-wrapper flexbox">
+              <ion-icon name="people-outline"></ion-icon>
+            </div>
+            <span class="link-text">Team</span>
+          </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+          <a class="navbar-item-inner flexbox-left">
+            <div class="navbar-item-inner-icon-wrapper flexbox">
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+            </div>
+            <span class="link-text">Support</span>
+          </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+          <a class="navbar-item-inner flexbox-left">
+            <div class="navbar-item-inner-icon-wrapper flexbox">
+              <ion-icon name="settings-outline"></ion-icon>
+            </div>
+            <span class="link-text">Settings</span>
+          </a>
+        </li>
       </ul>
     </nav>
-    <a href="{{ url_for('login') }}" target="_blank"
-      ><button class="button">LOGIN</button></a
-    >
+    <main id="main" class="flexbox-col">
+      <h2>Lorem ipsum!</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum corporis,
+        rerum doloremque iste sed voluptates omnis molestias molestiae animi
+        recusandae labore sit amet delectus ad necessitatibus laudantium qui!
+        Magni quisquam illum quaerat necessitatibus sint quibusdam perferendis!
+        Aut ipsam cumque deleniti error perspiciatis iusto accusamus
+        consequuntur assumenda. Obcaecati minima sed natus?
+      </p>
+    </main>
   </body>
 </html>
