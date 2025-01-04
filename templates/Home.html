@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team 7636</title>
     <link
       rel="icon"
@@ -19,12 +20,32 @@
       href="https://fonts.googleapis.com/css2?family=Toxigenesis&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
   </head>
   <body>
+    <script type="module">
+      import * as THREE from "https://cdn.skypack.dev/three@0.130.0";
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+      const geometry = new THREE.SphereGeometry(1, 32, 32);
+      const material = new THREE.MeshBasicMaterial({ color: 0x0ff00 });
+      const sphere = new THREE.Mesh(geometry, material);
+      scene.add(sphere);
+      function animate() {
+        sphere.rotation.x += 0.01;
+        sphere.rotation.y += 0.01;
+        requestAnimationFrame(animate);
+        renderer.renderer(scene, camera);
+      }
+      animate();
+    </script>
     <nav>
       <div class="wrapper">
         <div class="logo"><a href="#">FRC 7636 ROBOMANIA</a></div>
@@ -35,55 +56,45 @@
             ><i class="fas fa-times"></i
           ></label>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
           <li>
-            <a href="#" class="desktop-item">Dropdown Menu</a>
+            <a href="#" class="desktop-item">About</a>
             <input type="checkbox" id="showDrop" />
-            <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+            <label for="showDrop" class="mobile-item">About</label>
             <ul class="drop-menu">
-              <li><a href="#">Drop menu 1</a></li>
-              <li><a href="#">Drop menu 2</a></li>
-              <li><a href="#">Drop menu 3</a></li>
-              <li><a href="#">Drop menu 4</a></li>
+              <li><a href="#">Established</a></li>
+              <li><a href="#">Location</a></li>
+              <li><a href="#">Sponsor</a></li>
+              <li><a href="#">Calender</a></li>
+              <li><a href="#">Awards</a></li>
             </ul>
           </li>
           <li>
-            <a href="#" class="desktop-item">Mega Menu</a>
+            <a href="#" class="desktop-item">Seasons/Robots</a>
             <input type="checkbox" id="showMega" />
-            <label for="showMega" class="mobile-item">Mega Menu</label>
+            <label for="showMega" class="mobile-item">Seasons/Robots</label>
             <div class="mega-box">
               <div class="content">
                 <div class="row">
                   <img
-                    src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                    src="{{ url_for('static', filename='images/teamicon.jpg') }}"
                     alt=""
                   />
                 </div>
                 <div class="row">
-                  <header>Design Services</header>
+                  <header>Topics</header>
                   <ul class="mega-links">
-                    <li><a href="#">Graphics</a></li>
-                    <li><a href="#">Vectors</a></li>
-                    <li><a href="#">Business cards</a></li>
-                    <li><a href="#">Custom logo</a></li>
-                  </ul>
-                </div>
-                <div class="row">
-                  <header>Email Services</header>
-                  <ul class="mega-links">
-                    <li><a href="#">Personal Email</a></li>
-                    <li><a href="#">Business Email</a></li>
-                    <li><a href="#">Mobile Email</a></li>
-                    <li><a href="#">Web Marketing</a></li>
-                  </ul>
-                </div>
-                <div class="row">
-                  <header>Security services</header>
-                  <ul class="mega-links">
-                    <li><a href="#">Site Seal</a></li>
-                    <li><a href="#">VPS Hosting</a></li>
-                    <li><a href="#">Privacy Seal</a></li>
-                    <li><a href="#">Website design</a></li>
+                    <li><a href="#">2024 Seasons "Crescendo" Zelus</a></li>
+                    <li><a href="#">2023 Seasons "Charged Up" Vali</a></li>
+                    <li><a href="#">2022 Seasons "Rapid React" Horipoch</a></li>
+                    <li>
+                      <a href="#">2021 Seasons "Infinite Recharge" Syzygy</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        >2020 Seasons "Infinite Recharge"(suspend) N/A</a
+                      >
+                    </li>
+                    <li><a href="#">2019 Seasons "Deep Space" N/A</a></li>
                   </ul>
                 </div>
               </div>

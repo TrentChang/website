@@ -76,8 +76,8 @@ nav .wrapper {
 }
 .mega-box {
   position: absolute;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 70%;
   padding: 0 30px;
   top: 85px;
   opacity: 0;
@@ -92,13 +92,13 @@ nav .wrapper {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 .mega-box .content .row {
-  width: calc(25% - 30px);
+  width: calc(25% 70px);
   line-height: 45px;
 }
 .content .row img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .content .row header {
   color: #f2f2f2;
