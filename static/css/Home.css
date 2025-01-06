@@ -273,9 +273,47 @@ nav input {
 }
 footer {
   background-color: #4f4e4e;
-  position: relative;
-  height: 100px;
-  margin-top: -100px;
-  clear: both;
+  align-items: center;
+  bottom: 0;
+  color: #666666;
+  display: flex;
+  font-size: 5em;
+  height: 400px;
+  justify-content: center;
+  position: fixed;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 1;
+}
+#footertext {
+  color: white;
+  width: 100%;
+  padding: 0 0 0 15px;
+  font-weight: 600;
+  border-radius: 0px;
   text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+}
+#footerlink {
+  color: white;
+  width: 100%;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  border-radius: 0px;
+  text-align: center;
+}
+section {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 100px;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.margin-400 {
+  margin-bottom: 400px;
 }
