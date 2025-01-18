@@ -1,30 +1,39 @@
+/* fontfamily */
+
+.zen-dots-regular {
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* navbar */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Zen Dots", sans-serif;
 }
-nav {
-  position: fixed;
-  z-index: 99;
-  width: 100%;
-
-  background: #242526;
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-semi);
 }
 nav .wrapper {
   position: relative;
-  max-width: 1300px;
+  max-width: 1800px;
   padding: 0px 30px;
-  height: 70px;
+  height: 150px;
   line-height: 70px;
   margin: auto;
   display: flex;
-  align-items: center;
+  top: 30px;
+  right: 0px;
   justify-content: space-between;
 }
 .wrapper .logo a {
-  color: #f2f2f2;
+  color: #000000;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
@@ -36,7 +45,7 @@ nav .wrapper {
   list-style: none;
 }
 .nav-links li a {
-  color: #f2f2f2;
+  color: #000000;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -45,14 +54,16 @@ nav .wrapper {
   transition: all 0.3s ease;
 }
 .nav-links li a:hover {
-  background: #3a3b3c;
+  background: #dedede;
+  border-radius: 5px;
 }
 .nav-links .mobile-item {
   display: none;
 }
 .nav-links .drop-menu {
   position: absolute;
-  background: #242526;
+  border-radius: 5px;
+  background: #dedede;
   width: 180px;
   line-height: 45px;
   top: 85px;
@@ -77,17 +88,18 @@ nav .wrapper {
 .mega-box {
   position: absolute;
   right: 0;
-  width: 70%;
+  width: 63.75%;
   padding: 0 30px;
   top: 85px;
   opacity: 0;
   visibility: hidden;
 }
 .mega-box .content {
-  background: #242526;
+  background: #dedede;
+  border-radius: 5px;
   padding: 25px 20px;
   display: flex;
-  width: 100%;
+  width: 85%;
   justify-content: space-between;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
@@ -95,13 +107,8 @@ nav .wrapper {
   width: calc(25% 70px);
   line-height: 45px;
 }
-.content .row img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 .content .row header {
-  color: #f2f2f2;
+  color: #000000;
   font-size: 20px;
   font-weight: 500;
 }
@@ -115,15 +122,16 @@ nav .wrapper {
 .row .mega-links li a {
   padding: 0px;
   padding: 0 20px;
-  color: #d9d9d9;
-  font-size: 17px;
+  color: #000000;
+  font-size: (0, 0, 0) x;
   display: block;
+  border-radius: 10px;
 }
 .row .mega-links li a:hover {
-  color: #f2f2f2;
+  color: #000000;
 }
 .wrapper .btn {
-  color: #fff;
+  color: #000000;
   font-size: 20px;
   cursor: pointer;
   display: none;
@@ -145,7 +153,7 @@ nav .wrapper {
     max-width: 350px;
     top: 0;
     left: -100%;
-    background: #242526;
+    background: #dedede;
     display: block;
     padding: 50px 10px;
     line-height: 50px;
@@ -257,63 +265,88 @@ nav .wrapper {
 nav input {
   display: none;
 }
+body {
+  background-color: rgb(255, 255, 255);
+  margin: var(--header-height) 0 0 0;
+  font-family: "Zen Dots", serif;
+}
 
-.body-text {
+.home-title {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-  padding: 0 30px;
-}
-.body-text div {
-  font-size: 45px;
-  font-weight: 600;
-}
-footer {
-  background-color: #4f4e4e;
-  align-items: center;
-  bottom: 0;
-  color: #666666;
-  display: flex;
-  font-size: 5em;
-  height: 400px;
-  justify-content: center;
-  position: fixed;
-  text-transform: uppercase;
-  width: 100%;
-  z-index: 1;
-}
-#footertext {
-  color: white;
-  width: 100%;
-  padding: 0 0 0 15px;
-  font-weight: 600;
-  border-radius: 0px;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 30px;
-}
-#footerlink {
-  color: white;
-  width: 100%;
-  padding: 0 0 0 15px;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  border-radius: 0px;
-  text-align: center;
-}
-section {
-  background-color: #ffffff;
-  min-height: 100vh;
-  padding: 100px;
-  position: relative;
-  width: 100%;
-  z-index: 10;
+  top: 325px;
+  left: 100px;
+  font-size: 60px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
-.margin-400 {
-  margin-bottom: 400px;
+#img {
+  position: absolute;
+  top: 275px;
+  right: 150px;
+  width: 510px;
+  height: 340px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
 }
+
+@keyframes flowUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.About {
+  position: absolute;
+  top: 550px; /* Adjust this if you want to move it vertically */
+  left: 0%; /* Move the element horizontally to the center */
+  text-align: center;
+  font-size: 60px;
+  z-index: 1; /* Set a higher z-index to ensure it's on top */
+  position: relative;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+#intro {
+  position: absolute;
+  left: 10%; /* Move the element horizontally to the center */
+  top: 650px; /* Adjust this to set the desired vertical position */
+  text-align: center;
+  font-size: 20px;
+  z-index: 1; /* Set a higher z-index to ensure it's on top */
+  width: 80%; /* Set width to ensure the text doesn't overflow */
+  word-spacing: 0.5em;
+  min-height: 100vh;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+footer {
+  width: 100%;
+  height: 25px;
+  background: rgb(118, 118, 118);
+  bottom: 0px;
+  position: fixed;
+  z-index: 100;
+  text-align: center;
+}
+
+/*
+* {
+  border: 1px solid red;
+}
+*/

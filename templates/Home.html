@@ -13,40 +13,28 @@
       href="{{ url_for('static', filename='css/Home.css') }}"
     />
     <script
-      src="https://kit.fontawesome.com/9ab4af5272.js"
-      crossorigin="anonymous"
+      async
+      src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Toxigenesis&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
+    <script src="https://threejs.org/build/three.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/",
+          "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.min.js"
+        }
+      }
+    </script>
   </head>
   <body>
-    <!-----
-    <script type="module">
-      import * as THREE from "https://cdn.skypack.dev/three@0.130.0";
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-      );
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-      const geometry = new THREE.SphereGeometry(1, 32, 32);
-      const material = new THREE.MeshBasicMaterial({ color: 0x0ff00 });
-      const sphere = new THREE.Mesh(geometry, material);
-      scene.add(sphere);
-      function animate() {
-        sphere.rotation.x += 0.01;
-        sphere.rotation.y += 0.01;
-        requestAnimationFrame(animate);
-        renderer.renderer(scene, camera);
-      }
-      animate();
-    </script> --->
+    <!-- Existing Navbar -->
     <nav>
       <div class="wrapper">
         <div class="logo"><a href="#">FRC 7636 ROBOMANIA</a></div>
@@ -65,7 +53,7 @@
               <li><a href="#">Established</a></li>
               <li><a href="#">Location</a></li>
               <li><a href="#">Sponsor</a></li>
-              <li><a href="#">Calender</a></li>
+              <li><a href="#">Calendar</a></li>
               <li><a href="#">Awards</a></li>
             </ul>
           </li>
@@ -76,13 +64,7 @@
             <div class="mega-box">
               <div class="content">
                 <div class="row">
-                  <img
-                    src="{{ url_for('static', filename='images/teamicon.jpg') }}"
-                    alt=""
-                  />
-                </div>
-                <div class="row">
-                  <header>Topics</header>
+                  <header>Robots</header>
                   <ul class="mega-links">
                     <li><a href="#">2024 Seasons "Crescendo" Zelus</a></li>
                     <li><a href="#">2023 Seasons "Charged Up" Vali</a></li>
@@ -92,7 +74,7 @@
                     </li>
                     <li>
                       <a href="#"
-                        >2020 Seasons "Infinite Recharge"(suspend) N/A</a
+                        >2020 Seasons "Infinite Recharge"(suspended) N/A</a
                       >
                     </li>
                     <li><a href="#">2019 Seasons "Deep Space" N/A</a></li>
@@ -135,69 +117,42 @@
             </ul>
           </li>
           <li><a href="#">Feedback</a></li>
-          <li>
-            <a href="{{ url_for('login') }}">login</a>
-          </li>
         </ul>
         <label for="menu-btn" class="btn menu-btn"
           ><i class="fas fa-bars"></i
         ></label>
       </div>
     </nav>
-    <section class="margin-400">
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-      <h1>lol</h1>
-    </section>
 
-    <footer>
-      <br />
-      <h2 id="footertext">© 2019 - 2025 TEAM ROBOMANIA</h2>
-      <a
-        id="footerlink"
-        href="mailto:frc7636@nehs.tc.edu.tw.com"
-        target="_blank"
-        >frc7636@nehs.tc.edu.tw</a
-      >
+    <main class="main">
+      <h1 class="home-title">
+        Welcome, <br />We're <span class="home-title-color">FRC Team</span
+        ><br />
+        7636 - Robomania
+      </h1>
+      <img
+        id="img"
+        src="https://i.ytimg.com/vi/VpnLJj1TFWM/sddefault.jpg"
+        alt="Description of image"
+        style="margin-left: 10px"
+      />
+      <h1 class="About">About</h1>
+      <p id="intro">
+        FRC (FIRST Robotics Competition) Team 7636 is a passionate and dedicated
+        robotics team that participates in the global FIRST Robotics
+        Competition. Team 7636 is made up of students, mentors, and volunteers
+        who work together to design, build, and program robots for the annual
+        FRC game challenge. Each year, FRC teams are given a set of game rules,
+        and teams must build a robot to compete in matches, showcasing their
+        problem-solving skills, engineering talent, and collaboration.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <p>&#169; 2024 Copyright all rights reserved</p>
     </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
   </body>
 </html>
