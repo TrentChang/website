@@ -1,0 +1,539 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 289,
+      "max": [
+        1.6107178926467896,
+        3.8278415203094482,
+        2.2171270847320557
+      ],
+      "min": [
+        -1.6107165813446045,
+        0.6064126491546631,
+        1.3173880577087402
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3468,
+      "componentType": 5126,
+      "count": 289,
+      "max": [
+        0.7071082592010498,
+        0.7071071267127991,
+        1.0
+      ],
+      "min": [
+        -0.7071082592010498,
+        -0.7071065306663513,
+        0.5773506760597229
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 289,
+      "max": [
+        0.1995721459388733,
+        1.0,
+        0.7070841193199158,
+        1.0
+      ],
+      "min": [
+        -0.17840468883514404,
+        0.707084059715271,
+        -0.7070846557617188,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 289,
+      "max": [
+        0.3339281976222992,
+        0.333918958902359
+      ],
+      "min": [
+        0.0004994869232177734,
+        0.0004898905754089355
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1536,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 6936,
+      "componentType": 5126,
+      "count": 1156,
+      "max": [
+        2.217129707336426,
+        4.434254169464111,
+        1.6107150316238403
+      ],
+      "min": [
+        -2.217127799987793,
+        0.0,
+        -1.6107150316238403
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 20808,
+      "componentType": 5126,
+      "count": 1156,
+      "max": [
+        1.0,
+        1.0,
+        0.7071070671081543
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.7071071863174438
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 4624,
+      "componentType": 5126,
+      "count": 1156,
+      "max": [
+        0.7070983648300171,
+        0.9999998807907104,
+        0.9999998211860657,
+        1.0
+      ],
+      "min": [
+        -0.7070982456207275,
+        -0.7071062326431274,
+        -0.24152244627475739,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2312,
+      "componentType": 5126,
+      "count": 1156,
+      "max": [
+        0.8442824482917786,
+        0.9802759885787964
+      ],
+      "min": [
+        0.0004994869232177734,
+        0.0019424259662628174
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 6144,
+      "componentType": 5125,
+      "count": 6144,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 34680,
+      "componentType": 5126,
+      "count": 289,
+      "max": [
+        1.6107178926467896,
+        3.8278422355651855,
+        -1.3173880577087402
+      ],
+      "min": [
+        -1.6107165813446045,
+        0.6064126491546631,
+        -2.2171270847320557
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 38148,
+      "componentType": 5126,
+      "count": 289,
+      "max": [
+        0.7071084976196289,
+        0.7071064710617065,
+        -0.5773509740829468
+      ],
+      "min": [
+        -0.7071083784103394,
+        -0.7071071863174438,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 23120,
+      "componentType": 5126,
+      "count": 289,
+      "max": [
+        0.18286117911338806,
+        0.9999985694885254,
+        0.7070987820625305,
+        1.0
+      ],
+      "min": [
+        -0.23983396589756012,
+        0.7070987820625305,
+        -0.7070995569229126,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 11560,
+      "componentType": 5126,
+      "count": 289,
+      "max": [
+        0.9995003938674927,
+        0.3323933780193329
+      ],
+      "min": [
+        0.6691131591796875,
+        0.002005860209465027
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 30720,
+      "componentType": 5125,
+      "count": 1536,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "RoutineStudio (https://sketchfab.com/TheRoutine)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/eight-ball-24a32adaf6014528ad71a1de9af6b084",
+      "title": "Eight Ball"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 36864,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13872,
+      "byteOffset": 36864,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 41616,
+      "byteOffset": 50736,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 27744,
+      "byteOffset": 92352,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 120096,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Front_Side_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Front_Side_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Front_Side_normal.png"
+    },
+    {
+      "uri": "textures/lambert1_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/lambert1_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/lambert1_normal.png"
+    },
+    {
+      "uri": "textures/Back_Side_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Back_Side_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Back_Side_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Front_Side",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "lambert1",
+      "normalTexture": {
+        "index": 5
+      },
+      "occlusionTexture": {
+        "index": 4
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Back_Side",
+      "normalTexture": {
+        "index": 8
+      },
+      "occlusionTexture": {
+        "index": 7
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 6
+        },
+        "metallicRoughnessTexture": {
+          "index": 7
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Billard_Ball_Front_Side_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Billard_Ball_lambert1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Billard_Ball_Back_Side_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "8Ball.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5,
+        6
+      ],
+      "name": "Billard_Ball"
+    },
+    {
+      "mesh": 0,
+      "name": "Billard_Ball_Front_Side_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Billard_Ball_lambert1_0"
+    },
+    {
+      "mesh": 2,
+      "name": "Billard_Ball_Back_Side_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    },
+    {
+      "sampler": 0,
+      "source": 7
+    },
+    {
+      "sampler": 0,
+      "source": 8
+    }
+  ]
+}

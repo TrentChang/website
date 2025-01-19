@@ -26,18 +26,26 @@
     <script type="importmap">
       {
         "imports": {
-          "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/",
-          "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.min.js"
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
         }
       }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script>
   </head>
   <body>
     <!-- Existing Navbar -->
     <nav>
       <div class="wrapper">
-        <div class="logo"><a href="#">FRC 7636 ROBOMANIA</a></div>
+        <div class="logo">
+          <img
+            src="{{ url_for('static', filename='images/teamicon3.png') }}"
+            class="logo-image"
+          />
+          <a href="#">FRC TEAM#7636 ROBOMANIA </a>
+        </div>
+
         <input type="radio" name="slider" id="menu-btn" />
         <input type="radio" name="slider" id="close-btn" />
         <ul class="nav-links">
@@ -65,6 +73,7 @@
               <div class="content">
                 <div class="row">
                   <header>Robots</header>
+                  <hr />
                   <ul class="mega-links">
                     <li><a href="#">2024 Seasons "Crescendo" Zelus</a></li>
                     <li><a href="#">2023 Seasons "Charged Up" Vali</a></li>
@@ -132,7 +141,7 @@
       </h1>
       <img
         id="img"
-        src="https://i.ytimg.com/vi/VpnLJj1TFWM/sddefault.jpg"
+        src="{{ url_for('static', filename='images/Teamate.jpg')}}"
         alt="Description of image"
         style="margin-left: 10px"
       />
@@ -146,6 +155,19 @@
         and teams must build a robot to compete in matches, showcasing their
         problem-solving skills, engineering talent, and collaboration.
       </p>
+      <div class="three-container">
+        <canvas id="three-canvas">
+          <script
+            id="model"
+            type="module"
+            src="{{ url_for('static', filename='js/Home.js') }}"
+          ></script>
+        </canvas>
+      </div>
+      <p id="robotdiscription">2024 Season Crescendo robot: ZELUS!</p>
+      <button>
+        <span class="box">Learn more</span>
+      </button>
     </main>
 
     <footer class="footer">
