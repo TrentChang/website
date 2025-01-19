@@ -110,7 +110,7 @@ hr {
 .mega-box {
   position: absolute;
   right: 0;
-  width: 54.5%;
+  width: 54.45%;
   padding: 0 30px;
   top: 85px;
   opacity: 0;
@@ -467,6 +467,7 @@ button {
   border: none;
   background: transparent;
 }
+
 #map {
   position: relative;
   top: 1000px;
