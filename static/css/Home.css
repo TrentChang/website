@@ -302,6 +302,26 @@ body {
   min-height: calc(100vh - 60px);
 }
 
+section {
+  height: 36vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#about_setion {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#about_setion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .home-title {
   position: absolute;
   top: 325px;
@@ -343,30 +363,30 @@ body {
   font-size: 60px;
   z-index: 1; /* Set a higher z-index to ensure it's on top */
   position: relative;
-  transform: translateY(50px);
+  /* transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
+  animation-delay: 0.1s; */
 }
 
 #intro {
   line-height: 50px;
   position: absolute;
-  left: 10%; /* Move the element horizontally to the center */
+  left: 0; /* Move the element horizontally to the center */
   top: 795px; /* Adjust this to set the desired vertical position */
-  text-align: justify;
+  text-align: center;
   font-size: 26px;
   z-index: 1; /* Set a higher z-index to ensure it's on top */
   width: 80%; /* Set width to ensure the text doesn't overflow */
   position: relative;
-  opacity: 0;
+  /* opacity: 0;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
+  animation-delay: 0.1s; */
 }
-#aboutvideo {
+#aboutvideo { 
   position: relative;
   top: 845px;
-  left: 20%;
+  left: 0%;
   width: 100%;
   max-width: 920px;
   height: 517.5px;

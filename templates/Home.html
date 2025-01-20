@@ -10,7 +10,7 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/Home.css') }}"
+      href="{{ url_for('static', filename='css/home.css') }}"
     />
     <script
       async
@@ -135,6 +135,7 @@
     </nav>
 
     <main class="main">
+      <section id="home_section">
       <h1 class="home-title">
         Welcome, <br />We're <span class="home-title-color">FRC Team</span
         ><br />
@@ -146,6 +147,9 @@
         alt="Description of image"
         style="margin-left: 10px"
       />
+      </section>
+
+      <section id="about_section">
       <h1 class="About">About</h1>
       <hr />
       <p id="intro">
@@ -170,6 +174,8 @@
         loop
         id="aboutvideo"
       ></iframe>
+      </section>
+
       <div class="three-container">
         <canvas id="three-canvas">
           <script
@@ -198,6 +204,6 @@
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
   </body>
 </html>
