@@ -23,7 +23,7 @@
   top: 0;
   left: 0;
   width: 100%; /* Ensure it spans the full width */
-  padding: 0px 30px;
+  padding: 1em;
   height: 108px; /* Height of your navbar */
   line-height: 70px;
   display: flex;
@@ -51,21 +51,23 @@
 
 .wrapper .logo img {
   width: 90px; /* Increase the image size */
-  height: auto; /* Maintain the aspect ratio of the image */
   margin-right: 10px; /* Optional: Space between the image and text */
+  height: auto; /* Decreased height */
+  line-height: 60px;
 }
 .wrapper .nav-links {
   display: inline-flex;
 }
 .nav-links li {
   list-style: none;
+  top: 70px;
 }
 .nav-links li a {
   color: #000000;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  padding: 9px 15px;
+  padding: 1em;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
@@ -87,20 +89,25 @@
   visibility: hidden;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
-.nav-links li:hover .drop-menu,
+.nav-links li:hover .drop-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 100px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  top: 85px;
+}
 .nav-links li:hover .mega-box {
   opacity: 1;
   visibility: visible;
   top: 100px;
   z-index: 9999;
   transition: all 0.3s ease;
-}
-hr {
-  border: 0;
-  border-top: 2px solid #000;
-  margin: 5px 0;
+  top: 85px;
+  left: 51%;
 }
 .drop-menu li a {
+  position: relative;
   width: 100%;
   display: block;
   padding: 0 0 0 15px;
@@ -109,33 +116,28 @@ hr {
 }
 .mega-box {
   position: absolute;
-  right: 0;
-  width: 54.45%;
-  padding: 0 30px;
-  top: 85px;
+  width: 600px;
+  box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
 }
 .mega-box .content {
+  width: 700px;
   background: #ffffff;
   border-radius: 5px;
-  padding: 25px 20px;
+  padding: 1em;
   display: flex;
-  width: 85%;
   justify-content: space-between;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 .mega-box .content .row {
   width: calc(25% 70px);
   line-height: 45px;
+  margin: 0;
 }
-.content .row header {
-  color: #000000;
-  font-size: 20px;
-  font-weight: 500;
-}
+
 .content .row .mega-links {
-  margin-left: -40px;
+  margin-left: -2px;
   border-left: 1px solid rgba(255, 255, 255, 0.09);
 }
 .row .mega-links li {
@@ -148,6 +150,7 @@ hr {
   font-size: (0, 0, 0) x;
   display: block;
   border-radius: 10px;
+  text-align: left;
 }
 .row .mega-links li a:hover {
   color: #000000;
@@ -288,41 +291,80 @@ nav input {
   display: none;
 }
 
+@layer base, rhythm, layout, components, default, overwrites;
+
+html {
+  /* Create a snapping rule on the html element */
+  scroll-snap-type: y mandatory;
+
+  /* Create a timeline scope, so we can target any element on the page */
+  timeline-scope: --section, --main, --site-header;
+}
+
+/* We'll want to match these colors for the best melty effect */
+/* But play around with them (and add a color to section) to see happens */
+body,
+.content {
+  background-color: var(--color-background, rgb(255, 255, 255));
+}
+
 main {
-  margin-top: 0; /* Remove margin-top on smaller screens if navbar becomes sticky */
-  padding: 10px;
-  height: auto;
+  top: 50px;
+  padding: 20px;
   padding-bottom: 285px;
-}
-body {
-  background-color: rgb(255, 255, 255);
-  margin: var(--header-height) 0 0 0;
-  font-family: "Zen Dots", serif;
-
-  min-height: calc(100vh - 60px);
+  color: black;
 }
 
-section {
-  height: 36vh;
+.section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  view-timeline: --section;
+  height: 100dvh;
+}
+#snappingcontent {
+  position: absolute;
+  top: 500px;
+}
+
+main .content {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  --contrast: 4;
+  --blur: 0.5rem;
+  animation: blink ease-in-out both;
+  animation-timeline: --section;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    filter: blur(var(--blur)) contrast(var(--contrast));
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    filter: blur(0) contrast(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#snapping {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 100vh; /* Take up the full viewport height */
 }
 
-#about_setion {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+body .content {
+  text-align: center; /* Center text inside .content */
 }
 
-#about_setion.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.home-title {
+#Home h1 {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
   position: absolute;
   top: 325px;
   left: 100px;
@@ -331,9 +373,12 @@ section {
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
+  text-align: left;
 }
 
-#img {
+#Home img {
+  max-width: 100%; /* Make sure the image is responsive */
+  height: auto;
   position: absolute;
   top: 275px;
   right: 100px;
@@ -345,6 +390,151 @@ section {
   animation-delay: 0.1s;
 }
 
+#About h2 {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 235px;
+  left: 100px;
+  font-size: 50px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+#About h1 {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  font-size: 90px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+#About p {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 200px;
+  right: 70px;
+  font-size: 20px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: justify;
+  line-height: 2;
+  width: 800px;
+}
+#Established h1 {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 275px;
+  left: 50px;
+  font-size: 70px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+#Established p {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 275px;
+  right: 70px;
+  font-size: 20px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: justify;
+  line-height: 2;
+  width: 800px;
+}
+#Enroll h1 {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 275px;
+  left: 50px;
+  font-size: 70px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+#Sponsor h1 {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 275px;
+  left: 50px;
+  font-size: 70px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+#Awards h1 {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 275px;
+  left: 50px;
+  font-size: 70px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+#Location h1 {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 275px;
+  left: 50px;
+  font-size: 70px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+#Calendar h1 {
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  color: #000;
+  position: absolute;
+  top: 275px;
+  left: 50px;
+  font-size: 70px;
+  z-index: -1;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+
 @keyframes flowUp {
   0% {
     opacity: 0;
@@ -354,153 +544,4 @@ section {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.About {
-  top: 700px; /* Adjust this if you want to move it vertically */
-  left: 0%; /* Move the element horizontally to the center */
-  text-align: center;
-  font-size: 60px;
-  z-index: 1; /* Set a higher z-index to ensure it's on top */
-  position: relative;
-  /* transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s; */
-}
-
-#intro {
-  line-height: 50px;
-  position: absolute;
-  left: 0; /* Move the element horizontally to the center */
-  top: 795px; /* Adjust this to set the desired vertical position */
-  text-align: center;
-  font-size: 26px;
-  z-index: 1; /* Set a higher z-index to ensure it's on top */
-  width: 80%; /* Set width to ensure the text doesn't overflow */
-  position: relative;
-  /* opacity: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s; */
-}
-#aboutvideo { 
-  position: relative;
-  top: 845px;
-  left: 0%;
-  width: 100%;
-  max-width: 920px;
-  height: 517.5px;
-}
-.three-container {
-  position: relative; /* Ensures the container can be used for relative positioning */
-  width: 100%; /* Set the width to 100% or any desired size */
-  height: 500px; /* Set the height */
-  margin: 0 auto; /* Center the container horizontally */
-}
-
-#three-canvas {
-  position: absolute; /* Position absolutely within the container */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
-  width: 100%;
-  height: 100%;
-}
-
-#robotdiscription {
-  line-height: 50px;
-  width: 650px;
-  font-size: 30px;
-  position: relative;
-  top: 575px;
-  left: 750px;
-}
-
-.box {
-  letter-spacing: 0.5em;
-  width: 250px;
-  height: auto;
-  float: left;
-  transition: 0.5s linear;
-  position: relative;
-  top: 600px;
-  left: 750px;
-  display: block;
-  overflow: hidden;
-  padding: 15px;
-  text-align: center;
-  margin: 0 5px;
-  background: transparent;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-align: center;
-}
-
-.box:before {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  border-bottom: 4px solid transparent;
-  border-left: 4px solid transparent;
-  box-sizing: border-box;
-  transform: translateX(100%);
-}
-
-.box:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-top: 4px solid transparent;
-  border-right: 4px solid transparent;
-  box-sizing: border-box;
-  transform: translateX(-100%);
-}
-
-.box:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.box:hover:before {
-  border-color: #262626;
-  height: 100%;
-  transform: translateX(0);
-  transition: 0.3s transform linear, 0.3s height linear 0.3s;
-}
-
-.box:hover:after {
-  border-color: #262626;
-  height: 100%;
-  transform: translateX(0);
-  transition: 0.3s transform linear, 0.3s height linear 0.5s;
-}
-
-button {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: transparent;
-}
-
-#map {
-  position: relative;
-  top: 1000px;
-  width: 100%;
-  height: 517.5px;
-}
-
-footer {
-  width: 100%;
-  background: rgb(118, 118, 118);
-  bottom: 0px;
-  z-index: 100;
-  text-align: center;
-  position: fixed;
-  height: 30px;
 }
