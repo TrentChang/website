@@ -137,14 +137,10 @@
             We're <br> FRC Team</span><br />
             7636 - Robomania
           </h1>
-          <div class="container">
-            <img
-            src="{{ url_for('static', filename='images/Teamate.jpg')}}" 
-          />
-            <img
-            src="{{ url_for('static', filename='images/image.jpg')}}" 
-          />
-          </div>
+            <div class="image-slider">
+              <img src="{{url_for('static', filename='images/Teamate.jpg')}}" alt="Image 1">
+              <img src="{{url_for('static', filename='images/Teamate2.jpg')}}" alt="Image 2">
+            </div>
         </div>
       </section>
       <section id="About" class="section">

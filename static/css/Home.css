@@ -365,7 +365,7 @@ body .content {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 255px;
+  top: 240px;
   left: 100px;
   font-size: 60px;
   z-index: 0;
@@ -376,52 +376,47 @@ body .content {
   color: #ffffff;
 }
 
-.container {
-  height: 100vh;
+/* Container for the image slider */
+.image-slider {
   width: 100%;
+  height: 100vh; /* Adjust height to fill the screen or as needed */
   position: relative;
+  overflow: hidden; /* Hide overflow so that only one image is visible at a time */
 }
 
-@keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  33% {
-    opacity: 0;
-  }
-  67% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.container img {
-  max-width: 100%; /* Make sure the image is responsive */
-  height: auto;
-  position: absolute;
-  object-fit: cover;
-  top: 20px;
-  left: 0px;
-  width: 2200px; /* Corrected the typo (x -> px) */
+/* Slider images */
+.image-slider img {
   z-index: -1;
-  transform: translateY(50px);
-  opacity: 0.48; /* Starting opacity value */
-  transition: opacity s ease-out; /* Added a transition for smoother change */
-  animation: fade 6s ease-in-out infinite alternate;
-}
-img:nth-of-type(1) {
-  animation-delay: 0s;
-}
-img:nth-of-type(2) {
-  animation-delay: 3s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 95px;
+  left: 0;
+  object-fit: cover; /* Ensure images cover the container without stretching */
+  opacity: 0; /* Initially hide all images */
+  animation: fade 10s infinite; /* Loop the fade animation infinitely with a longer duration */
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Image 1 - Starts immediately */
+.image-slider img:nth-child(1) {
+  animation-delay: 0s; /* Starts right away */
+}
+
+/* Image 2 - Starts after 5 seconds */
+.image-slider img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+/* Keyframes for smooth fade transition */
+/* Keyframes for smooth fade transition */
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0; /* Start and end with image hidden */
+  }
+  50% {
+    opacity: 1; /* Fully visible at the midpoint of the animation */
+  }
 }
 
 #Home img.visible {
@@ -579,6 +574,7 @@ img:nth-of-type(2) {
   text-align: left;
 }
 #model .box {
+  background-color: #000000;
   letter-spacing: 0.5em;
   width: 250px;
   height: auto;
@@ -623,7 +619,7 @@ img:nth-of-type(2) {
 }
 
 .box:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
 }
 
 .box:hover:before {
@@ -641,7 +637,7 @@ img:nth-of-type(2) {
 }
 
 button {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   cursor: pointer;
   outline: none;
