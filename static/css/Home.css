@@ -30,27 +30,27 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff; /* Ensure the background stays visible */
+  background-color: #000000; /* Ensure the background stays visible */
   z-index: 1000;
 }
 
 .wrapper .logo {
   display: flex;
   align-items: center; /* Align image and text vertically */
-  width: 800px;
+  width: 350px;
 }
 
 .wrapper .logo a {
   display: flex;
-  color: #000000;
-  font-size: 30px;
+  color: #ffffff;
+  font-size: 50px;
   font-weight: 600;
   text-decoration: none;
   align-items: center; /* Align the image and text inside the anchor tag */
 }
 
 .wrapper .logo img {
-  width: 90px; /* Increase the image size */
+  width: 70px; /* Increase the image size */
   margin-right: 10px; /* Optional: Space between the image and text */
   height: auto; /* Decreased height */
   line-height: 60px;
@@ -63,7 +63,7 @@
   top: 70px;
 }
 .nav-links li a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -72,7 +72,7 @@
   transition: all 0.3s ease;
 }
 .nav-links li a:hover {
-  background: #dedede;
+  background: #787878;
   border-radius: 5px;
 }
 .nav-links .mobile-item {
@@ -81,7 +81,7 @@
 .nav-links .drop-menu {
   position: absolute;
   border-radius: 5px;
-  background: #ffffff;
+  background: #000000;
   width: 180px;
   line-height: 45px;
   top: 85px;
@@ -123,7 +123,7 @@
 }
 .mega-box .content {
   width: 700px;
-  background: #ffffff;
+  background: #000000;
   border-radius: 5px;
   padding: 1em;
   display: flex;
@@ -146,7 +146,7 @@
 .row .mega-links li a {
   padding: 0px;
   padding: 0 20px;
-  color: #000000;
+  color: #ffffff;
   font-size: (0, 0, 0) x;
   display: block;
   border-radius: 10px;
@@ -305,14 +305,21 @@ html {
 /* But play around with them (and add a color to section) to see happens */
 body,
 .content {
-  background-color: var(--color-background, rgb(255, 255, 255));
+  background-image: linear-gradient(
+    0deg,
+    hsl(234deg 67% 28%) 0%,
+    hsl(239deg 65% 24%) 12%,
+    hsl(244deg 73% 19%) 19%,
+    hsl(246deg 89% 15%) 24%,
+    hsl(246deg 100% 13%) 31%,
+    hsl(0deg 0% 0%) 76%
+  );
 }
 
 main {
   top: 50px;
   padding: 20px;
   padding-bottom: 285px;
-  color: black;
 }
 
 .section {
@@ -350,13 +357,6 @@ main .content {
   }
 }
 
-#snapping {
-  display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  height: 100vh; /* Take up the full viewport height */
-}
-
 body .content {
   text-align: center; /* Center text inside .content */
 }
@@ -364,36 +364,39 @@ body .content {
 #Home h1 {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
-  top: 325px;
+  top: 255px;
   left: 100px;
   font-size: 60px;
-  z-index: -1;
+  z-index: 0;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
   text-align: left;
+  color: #ffffff;
 }
 
 #Home img {
   max-width: 100%; /* Make sure the image is responsive */
   height: auto;
   position: absolute;
-  top: 275px;
-  right: 100px;
-  width: 540px;
-  height: (16/9 * width);
+  top: 20px;
+  left: -10px;
+  width: 2200px; /* Corrected the typo (x -> px) */
   z-index: -1;
   transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
+  opacity: 0.48; /* Starting opacity value */
+  transition: opacity 1s ease-out; /* Added a transition for smoother change */
+}
+
+#Home img.visible {
+  opacity: 0.4; /* Full opacity when class is added */
 }
 
 #About h2 {
+  color: #ffffff;
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 235px;
   left: 100px;
@@ -405,13 +408,13 @@ body .content {
   text-align: left;
 }
 #About h1 {
+  color: #ffffff;
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 300px;
   left: 100px;
-  font-size: 90px;
+  font-size: 70px;
   z-index: -1;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
@@ -419,9 +422,9 @@ body .content {
   text-align: left;
 }
 #About p {
+  color: #ffffff;
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 200px;
   right: 70px;
@@ -435,9 +438,9 @@ body .content {
   width: 800px;
 }
 #Established h1 {
+  color: #ffffff;
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 275px;
   left: 50px;
@@ -449,9 +452,9 @@ body .content {
   text-align: left;
 }
 #Established p {
+  color: #ffffff;
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 275px;
   right: 70px;
@@ -464,24 +467,9 @@ body .content {
   line-height: 2;
   width: 800px;
 }
-#Enroll h1 {
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  color: #000;
-  position: absolute;
-  top: 275px;
-  left: 50px;
-  font-size: 70px;
-  z-index: -1;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
 #Sponsor h1 {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 275px;
   left: 50px;
@@ -495,7 +483,6 @@ body .content {
 #Awards h1 {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 275px;
   left: 50px;
@@ -509,7 +496,6 @@ body .content {
 #Location h1 {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 275px;
   left: 50px;
@@ -523,7 +509,6 @@ body .content {
 #Calendar h1 {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 275px;
   left: 50px;
@@ -548,7 +533,6 @@ body .content {
 #model h1 {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
-  color: #000;
   position: absolute;
   top: 275px;
   right: 235px;
@@ -559,7 +543,7 @@ body .content {
   animation-delay: 0.1s;
   text-align: left;
 }
-.box {
+#model .box {
   letter-spacing: 0.5em;
   width: 250px;
   height: auto;
