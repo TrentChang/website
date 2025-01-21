@@ -376,17 +376,52 @@ body .content {
   color: #ffffff;
 }
 
-#Home img {
+.container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container img {
   max-width: 100%; /* Make sure the image is responsive */
   height: auto;
   position: absolute;
+  object-fit: cover;
   top: 20px;
-  left: -10px;
+  left: 0px;
   width: 2200px; /* Corrected the typo (x -> px) */
   z-index: -1;
   transform: translateY(50px);
   opacity: 0.48; /* Starting opacity value */
-  transition: opacity 1s ease-out; /* Added a transition for smoother change */
+  transition: opacity s ease-out; /* Added a transition for smoother change */
+  animation: fade 6s ease-in-out infinite alternate;
+}
+img:nth-of-type(1) {
+  animation-delay: 0s;
+}
+img:nth-of-type(2) {
+  animation-delay: 3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #Home img.visible {
