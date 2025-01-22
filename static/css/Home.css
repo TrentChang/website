@@ -375,6 +375,7 @@ body .content {
   text-align: left;
   color: #ffffff;
 }
+
 /* Container for the image slider */
 .image-slider {
   width: 100%;
@@ -398,7 +399,9 @@ body .content {
 
 /* Image 1 - Starts immediately */
 .image-slider img:nth-child(1) {
-  animation-delay: 0s; /* Starts immediately */
+  opacity: 1; /* Start the first image with full opacity */
+  animation: fadeFirstImage 20s infinite; /* Special animation for the first image */
+  animation-name: 0s;
 }
 
 /* Image 2 - Starts after 5 seconds */
@@ -416,7 +419,7 @@ body .content {
   animation-delay: 15s;
 }
 
-/* Keyframes for smoother, faster fade transition */
+/* Keyframes for smooth fade transition */
 @keyframes fade {
   0%,
   10% {
@@ -425,6 +428,21 @@ body .content {
   15%,
   40% {
     opacity: 1; /* Quick fade-in to full opacity */
+  }
+  45%,
+  100% {
+    opacity: 0; /* Fade out smoothly */
+  }
+}
+
+/* Special animation for the first image to ensure it starts immediately */
+@keyframes fadeFirstImage {
+  0% {
+    opacity: 0.1; /* Make the first image visible immediately */
+  }
+  15%,
+  40% {
+    opacity: 1; /* Ensure it stays fully visible for a moment */
   }
   45%,
   100% {
