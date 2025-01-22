@@ -375,7 +375,6 @@ body .content {
   text-align: left;
   color: #ffffff;
 }
-
 /* Container for the image slider */
 .image-slider {
   width: 100%;
@@ -394,12 +393,12 @@ body .content {
   left: 0;
   object-fit: cover; /* Ensure images cover the container without stretching */
   opacity: 0; /* Initially hide all images */
-  animation: fade 10s infinite; /* Loop the fade animation infinitely with a longer duration */
+  animation: fade 20s infinite; /* Increased duration to accommodate 4 images */
 }
 
 /* Image 1 - Starts immediately */
 .image-slider img:nth-child(1) {
-  animation-delay: 0s; /* Starts right away */
+  animation-delay: 0s; /* Starts immediately */
 }
 
 /* Image 2 - Starts after 5 seconds */
@@ -407,20 +406,30 @@ body .content {
   animation-delay: 5s;
 }
 
-/* Keyframes for smooth fade transition */
-/* Keyframes for smooth fade transition */
-@keyframes fade {
-  0%,
-  100% {
-    opacity: 0; /* Start and end with image hidden */
-  }
-  50% {
-    opacity: 1; /* Fully visible at the midpoint of the animation */
-  }
+/* Image 3 - Starts after 10 seconds */
+.image-slider img:nth-child(3) {
+  animation-delay: 10s;
 }
 
-#Home img.visible {
-  opacity: 0.4; /* Full opacity when class is added */
+/* Image 4 - Starts after 15 seconds */
+.image-slider img:nth-child(4) {
+  animation-delay: 15s;
+}
+
+/* Keyframes for smoother, faster fade transition */
+@keyframes fade {
+  0%,
+  10% {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  15%,
+  40% {
+    opacity: 1; /* Quick fade-in to full opacity */
+  }
+  45%,
+  100% {
+    opacity: 0; /* Fade out smoothly */
+  }
 }
 
 #About h2 {
