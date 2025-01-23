@@ -362,7 +362,7 @@ body .content {
 }
 
 #Home h1 {
-  line-height: 1.5em;
+  line-height: 1.8em;
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
@@ -380,9 +380,9 @@ body .content {
 /* Container for the slides */
 .slides {
   right: 0px;
-  height: 100vh;
+  height: 130vh;
   width: 100%;
-  top: 100px;
+  top: 50px;
   overflow: hidden;
   position: relative;
   z-index: -1;
@@ -395,6 +395,14 @@ body .content {
   opacity: 0;
   inset: 0;
   animation: slide-show 16s infinite;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.5); /* Reduces image brightness */
 }
 
 /* Apply delay for each slide */
@@ -489,7 +497,7 @@ body .content {
   left: 200px;
   font-size: 70px;
   font-weight: 100px;
-  z-index: -1;
+  z-index: 0;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
@@ -529,8 +537,8 @@ body .content {
   width: 450px;
 }
 
-#Established img {
-  z-index: -1;
+#Teamicon {
+  z-index: 0;
   position: absolute;
   top: 180px;
   right: 250px;
@@ -539,30 +547,77 @@ body .content {
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
 }
+
+#Lin {
+  z-index: -1;
+  position: absolute;
+  opacity: 0.5;
+  right: 0;
+  left: 0;
+  top: 70px;
+  bottom: 0;
+  width: 100%;
+  height: 900px;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(0.6); /* Alternative way to reduce opacity */
+}
+
 #Departments h1 {
   color: #ffffff;
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 195px;
-  left: 200px;
+  top: 140px;
+  left: 350px;
   font-size: 70px;
   font-weight: 100px;
-  z-index: -1;
+  z-index: 0;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
   text-align: left;
 }
-#Departments h5 {
+#top {
   font-weight: 100px;
+  color: #ffffff;
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  position: absolute;
+  top: 240px;
+  left: 450px;
+  font-size: 22px;
+  z-index: 0;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+#Strategy {
   color: #d89695;
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 280px;
+  top: 335px;
   left: 200px;
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: 100px;
+  z-index: 0;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+#Electrical {
+  color: #d89695;
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  position: absolute;
+  top: 430px;
+  left: 200px;
+  font-size: 30px;
+  font-weight: 100px;
   z-index: 0;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
@@ -570,17 +625,86 @@ body .content {
   text-align: left;
 }
 
-#Departments img {
-  z-index: -1;
+#Mechanical {
+  color: #d89695;
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
   position: absolute;
-  right: 0px;
-  height: 1080px;
-  width: 1920px;
-  top: -70px;
+  top: 540px;
+  left: 200px;
+  font-size: 30px;
+  font-weight: 100px;
+  z-index: 0;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
+  text-align: left;
 }
+
+#backgroundimage {
+  z-index: -1;
+  position: absolute;
+  opacity: 0.5;
+  right: 0;
+  left: 0;
+  top: -300px;
+  bottom: 0;
+  width: 100%;
+  height: 1500px;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(0.6); /* Alternative way to reduce opacity */
+}
+
+#Strategyicon {
+  position: absolute;
+  z-index: 0;
+  top: 290px;
+  width: 70px;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(1); /* Alternative way to reduce opacity */
+}
+
+#Electricalicon {
+  position: absolute;
+  z-index: 0;
+  top: 395px;
+  width: 70px;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(1); /* Alternative way to reduce opacity */
+}
+#Mechanicalicon {
+  position: absolute;
+  z-index: 0;
+  top: 505px;
+  width: 70px;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(1); /* Alternative way to reduce opacity */
+}
+
+#buttom {
+  font-weight: 100px;
+  color: #ffffff;
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  position: absolute;
+  top: 650px;
+  left: 250px;
+  font-size: 22px;
+  z-index: 0;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  text-align: left;
+}
+
 #Sponsor h1 {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
