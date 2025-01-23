@@ -496,7 +496,7 @@ body .content {
   opacity: 0.5;
   right: 0;
   left: 0;
-  top: 30px;
+  top: 70px;
   bottom: 0;
   width: 100%;
   height: 800px;
@@ -544,7 +544,7 @@ body .content {
   opacity: 0.5;
   right: 0;
   left: 0;
-  top: 70px;
+  top: 100px;
   bottom: 0;
   width: 100%;
   height: 900px;
@@ -844,31 +844,52 @@ body .content {
   text-align: left;
 }
 
-#Sponsor h1 {
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 275px;
-  left: 50px;
-  font-size: 70px;
+#Sponsor img {
   z-index: -1;
+  position: absolute;
+  left: 150px;
+  top: 110px;
+  bottom: 0;
+  width: 1200px;
+  height: 600px;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
-  text-align: left;
 }
-#Awards h1 {
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
+
+#backgroundtext {
   position: absolute;
-  top: 275px;
-  left: 50px;
-  font-size: 70px;
-  z-index: -1;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
+  font-size: 270px;
+  opacity: 0.15;
+  color: white;
+  top: 300px;
+}
+
+#awards {
+  position: absolute;
+  color: white;
+  top: 170px;
+  line-height: 2.3em;
+  left: 420px;
+}
+
+#awards h2 {
+  font-size: 30px;
+  color: #d89695;
+}
+
+#awards h3 {
+  font-size: 25px;
+  color: #d89695;
+}
+
+#Awards h1 {
+  position: absolute;
+  z-index: 0;
+  color: white;
+  top: 300px;
+  font-size: 270px;
+  opacity: 0.2;
 }
 #Awards img {
   z-index: -1;
@@ -876,10 +897,10 @@ body .content {
   opacity: 0.5;
   right: 0;
   left: 0;
-  top: -300px;
+  top: -150px;
   bottom: 0;
   width: 100%;
-  height: 1500px;
+  height: 1400px;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
@@ -887,18 +908,49 @@ body .content {
 }
 
 #Location h1 {
+  color: white;
   margin: 0;
-  padding-right: 20px; /* Space between text and image */
+  z-index: 0;
+  opacity: 0.4;
+  font-size: 120px;
+}
+
+#left {
+  rotate: 270deg;
   position: absolute;
-  top: 275px;
-  left: 50px;
-  font-size: 70px;
+  top: 350px;
+  left: -280px;
+}
+
+#right {
+  rotate: 90deg;
+  position: absolute;
+  top: 350px;
+  right: -280px;
+}
+
+#Location img {
   z-index: -1;
+  position: absolute;
+  opacity: 0.5;
+  right: 0;
+  left: 0;
+  top: -40px;
+  bottom: 0;
+  width: 100%;
+  height: 1000px;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
-  text-align: left;
+  filter: brightness(0.5); /* Alternative way to reduce opacity */
 }
+
+#Location iframe {
+  position: absolute;
+  top: 200px;
+  left: 380px;
+}
+
 #Calendar h1 {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
@@ -906,7 +958,7 @@ body .content {
   top: 275px;
   left: 50px;
   font-size: 70px;
-  z-index: -1;
+  z-index: 0;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
@@ -930,14 +982,32 @@ body .content {
   top: 275px;
   right: 235px;
   font-size: 60px;
-  z-index: -1;
+  z-index: 0;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
   text-align: left;
+  color: white;
 }
+
+#model img {
+  z-index: -1;
+  position: absolute;
+  opacity: 0.5;
+  right: 0;
+  left: -0px;
+  top: -300px;
+  bottom: 0;
+  width: 1800px;
+  height: 1600px;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(0.3); /* Alternative way to reduce opacity */
+}
+
 #model .box {
-  background-color: #000000;
+  background-color: #ffffff;
   letter-spacing: 0.5em;
   width: 250px;
   height: auto;
@@ -953,6 +1023,7 @@ body .content {
   text-transform: uppercase;
   font-weight: 900;
   text-align: center;
+  color: white;
 }
 
 .box:before {
@@ -986,14 +1057,14 @@ body .content {
 }
 
 .box:hover:before {
-  border-color: #262626;
+  border-color: #ffffff;
   height: 100%;
   transform: translateX(0);
   transition: 0.3s transform linear, 0.3s height linear 0.3s;
 }
 
 .box:hover:after {
-  border-color: #262626;
+  border-color: #ffffff;
   height: 100%;
   transform: translateX(0);
   transition: 0.3s transform linear, 0.3s height linear 0.5s;
