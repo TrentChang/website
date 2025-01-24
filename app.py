@@ -2,7 +2,7 @@ from flask import Flask, config, flash, redirect, render_template, request, send
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 
 app = Flask(__name__)
-# app.secret_key = 'frc7636'
+# app.secret_key = '####'
 
 # login_manager = LoginManager()
 # login_manager.init_app(app)
@@ -10,7 +10,7 @@ app = Flask(__name__)
 # login_manager.login_view = 'login'
 # login_manager.login_message = '請先登入'
 
-# users = {'admin': {'password': 'frc7636'}}
+# users = {'admin': {'password': '####'}}
 
 # class User(UserMixin):
 #     pass
