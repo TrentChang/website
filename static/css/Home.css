@@ -402,7 +402,7 @@ body .content {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.5); /* Reduces image brightness */
+  filter: brightness(0.4); /* Reduces image brightness */
 }
 
 /* Apply delay for each slide */
@@ -995,10 +995,10 @@ body .content {
   position: absolute;
   opacity: 0.5;
   right: 0;
-  left: -0px;
-  top: -300px;
+  left: -20px;
+  top: -370px;
   bottom: 0;
-  width: 1800px;
+  width: 1700px;
   height: 1600px;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
