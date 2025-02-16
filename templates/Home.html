@@ -10,29 +10,26 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/home.css') }}"
+      href="{{ url_for('static', filename='css/Home.css') }}"
     />
     <script
       async
       src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
     ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://threejs.org/build/three.js"></script>
     <script type="importmap">
-      {
-        "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
           "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
         }
-      }
-    </script>
+			}
+		</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.min.js"></script>
     <nav>
       <div class="wrapper">
         <div class="logo">
@@ -40,7 +37,7 @@
             src="{{ url_for('static', filename='images/teamicon2.png') }}"
             class="logo-image"
           />
-          <a href="#">Robomania </a>
+          <a href="#">ROBOMANIA</a>
         </div>
 
         <input type="radio" name="slider" id="menu-btn" />
@@ -49,23 +46,21 @@
           <label for="close-btn" class="btn close-btn"
             ><i class="fas fa-times"></i
           ></label>
-          <li><a href="#">Home</a></li>
+          <li><a href="#">HOME</a></li>
           <li>
-            <a href="#About" class="desktop-item">About</a>
+            <a href="#About" class="desktop-item">ABOUT</a>
             <input type="checkbox" id="showDrop" />
-            <label for="showDrop" class="mobile-item">About</label>
+            <label for="showDrop" class="mobile-item">ABOUT</label>
             <ul class="drop-menu">
               <li><a href="#Established">Established</a></li>
-              <li><a href="#OurMission">Our Mission</a></li>
               <li><a href="#Departments">Departments</a></li>
-              <li><a href="#Sponsor">Sponsor</a></li>
               <li><a href="#Awards">Awards</a></li>
-              <li><a href="#Location">Location</a></li>
-              <li><a href="#Calendar">Calendar</a></li>
+              <li><a href="#Sponsor">Sponsor</a></li>
+              
             </ul>
           </li>
           <li>
-            <a href="#model" class="desktop-item">Seasons/Robots</a>
+            <a href="#model" class="desktop-item">SEASONS/ROBOTS</a>
             <input type="checkbox" id="showMega" />
             <label for="showMega" class="mobile-item"></label>
             <div class="mega-box">
@@ -91,9 +86,9 @@
             </div>
           </li>
           <li>
-            <a class="desktop-item">Media</a>
+            <a class="desktop-item">MEDIA</a>
             <input type="checkbox" id="showDrop" />
-            <label for="showDrop" class="mobile-item">Media</label>
+            <label for="showDrop" class="mobile-item">MEDIA</label>
             <ul class="drop-menu">
               <li>
                 <a
@@ -123,7 +118,7 @@
               </li>
             </ul>
           </li>
-          <li><a>Feedback</a></li>
+          <li><a>FEEDBACK</a></li>
         </ul>
         <label for="menu-btn" class="btn menu-btn"
           ><i class="fas fa-bars"></i
@@ -136,127 +131,45 @@
       <section id="Home" class="section">
         <div class="content">
           <h1>
-            We're <br> FRC Team</span><br />
-            7636 - Robomania
-          </h1>
-          <div class="slides">
-            <div class="slide slide-1">
-              <img src="{{url_for('static', filename='images/Teamate.jpg')}}" alt="Image 1">
-            </div>
-            <div class="slide slide-2">
-              <img src="{{url_for('static', filename='images/Teamate2.jpg')}}" alt="Image 2">
-            </div>
-            <div class="slide slide-3">
-              <img src="{{url_for('static', filename='images/Teamate3.jpg')}}" alt="Image 3">
-            </div>
-            <div class="slide slide-4">
-              <img src="{{url_for('static', filename='images/Teamate4.jpg')}}" alt="Image 4">
-            </div>
-          </div>          
+            WE ' RE <br /> FRC Team</span><br />
+            7636 <br /> ROBOMANIA
+          </h1>          
+          <script id="model1" type="module" src="{{ url_for('static', filename='js/Home.js')}}"></script>
       </section>
       <section id="About" class="section">
         <div class="content">
-          <p id="Abouttop">
-            FIRST, as "For Inspiration and Recognition of Science and Technology" is an international youth organization that operates the FIRST Robotics Competition. 
-          </p>
-          <p id="Aboutbuttom">Founded by Dean Kamen and Woodie Flowers in 1989, its expressed goal is to develop ways to inspire students in engineering and technology fields. Its philosophy is expressed by the organization as coopetition and gracious professionalism.</p>
-          <img id="Firsticon1" src="{{url_for('static', filename='images/firsticon1.png')}}">
-          <img id="Firsticon2" src="{{url_for('static', filename='images/firsticon2.png')}}">
-          <img id="Aboutimg" src="{{ url_for('static', filename='images/page6.jpg')}}">
-        </div>
-      </section>
-      <section class="section">
-        <div class="content">
-          <p id="spirittop">
-            FRC not only emphasizes on the core principles of STEM, 
-          </p>
-          <p id="spiritmiddle">(Science, Technology, Engineering, and Mathematics)</p>
-          <p id="spiritbuttom">But also incorporates Arts to promote creativity, design, and communication, making it a holistic educational experience.</p>
-          <img id="spiritimg" src="{{ url_for('static', filename='images/page4.png')}}">
+          <img id="Aboutimg" src="{{ url_for('static', filename='images/1.png')}}">
         </div>
       </section>
       <section id="Established" class="section">
         <div class="content">
-          <h1>ROBOMANIA</h1>
-          <h5>“Imagine. Innovate. Inspire.”</h5>
-          <p>
-            Established in 2018 in Taichung, Taiwan. Starting with just 13 members, we have grown to a diverse team of 123 members in total, representing various ages, genders, and nationalities. 
-          </p>
-          <img id="Teamicon" src="{{ url_for('static', filename='images/teamicon2.png')}}">
-          <img id="Lin" src="{{ url_for('static', filename='images/page3.png')}}">
-        </div>
-      </section>
-      <section id="OurMission" class="section">
-        <div class="content">
-          <h1>Our Mission</h1>
-          <p>Our mission is to contribute to a smarter and better world through innovative designs, creative solutions, and strategic excellence. </p>
-          <img src="{{ url_for('static', filename='images/page2.jpg')}}">
+          <img id="Establishedimg" src="{{ url_for('static', filename='images/2.png')}}">
         </div>
       </section>
       <section id="Departments" class="section">
         <div class="content">
-          <h1>Team Departments</h1>
-          <h5 id="top">Our team is organized into three departments:</h5>
-          <h3 id="Electrical">Electrical Engineering</h3>
-          <h3 id="Strategy">Strategy & Public Relations</h3>
-          <h3 id="Mechanical">Mechanical Engineering</h3>
-          <h5 id="buttom">Ensuring efficiency, collaboration, and productivity in all aspects of our work.</h5>
-          <img id="backgroundimage" src="{{url_for('static', filename='images/page1.jpg')}}">
-          <img id="Strategyicon" src="{{url_for('static', filename='images/depicon.png')}}">
-          <img id="Electricalicon" src="{{url_for('static', filename='images/depicon3.png')}}">
-          <img id="Mechanicalicon" src="{{url_for('static', filename='images/depicon2.png')}}">
-        </div>
-      </section>
-      <section id="Sponsor" class="section">
-        <div class="content">
-          <img src="{{url_for('static', filename='images/page8.png')}}">
+          <img id="Departmentsimg" src="{{url_for('static', filename='images/3.png')}}">
         </div>
       </section>
       <section id="Awards" class="section">
         <div class="content">
-          <h1>AWARDS</h1>
-          <div id="awards">
-            <h2>2020</h2>
-            <h3>Science Park Taichung Regional (Cancelled)</h3>
-            <h4>-FIRST Dean's List Finalist Award (Che Wei Chang)</h4>
-            <h4>-FIRST Dean's List Finalist Award (Yang Tung-Lun)</h4>
-            <br>
-            <h2>2022</h2>
-            <h3>New Taipei City x Hon Hai Regional</h3>
-            <h4>-FIRST Dean's List Finalist Award (An Hsu)</h4>
-            <br>
-            <h2>2023</h2>
-            <h3>Finger Lakes Regional</h3>
-            <h4>-FIRST Dean's List Finalist Award (Chu-Hui Liang)</h4>
-            <h3>FIRST Long Island Regional #1</h3>
-            <h4>-Industrial Design Award sponsored by General Motors</h4>
-        </div>
-        <img src="{{url_for('static', filename='images/page5.jpg')}}">
+        <img src="{{url_for('static', filename='images/4.png')}}">
         </div>
       </section>
-      <section id="Location" class="section">
+      <section id="Sponsor" class="section">
         <div class="content">
-          <h1 id="left">Location</h1>
-          <h1 id="right">Location</h1>
-          <img src="{{url_for('static', filename='images/page7.jpeg')}}">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.3097589506497!2d120.6258336!3d24.230186599999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d1d68110173%3A0xf1a85cea689e4cac!2sNational%20Experimental%20High%20School%20at%20Central%20Taiwan%20Science%20Park!5e1!3m2!1sen!2stw!4v1737632746090!5m2!1sen!2stw" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </section>
-      <section id="Calendar" class="section">
-        <div class="content">
-          <h1>Calendar</h1>
+          <img id="Sponsorimg" src="{{url_for('static', filename='images/5.png')}}">
         </div>
       </section>
       <section id="model" class="section">
         <div class="content">
           <h1>Latest Robot</h1>
           <span class="box">Learn more</span>
-          <img src="{{url_for('static', filename='images/page9.jpg')}}">
         </div>
       </section>
+      <footer><h1>Developer: Trent:)</h1></footer>
     </main>
-    <footer>
-      <p></p>
-    </footer>
   </body>
 </html>
+
+

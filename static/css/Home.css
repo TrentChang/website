@@ -1,7 +1,7 @@
-.zen-dots-regular {
-  font-family: "Zen Dots", serif;
-  font-weight: 400;
+.roboto {
+  font-family: "Roboto", serif;
   font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 /* navbar */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Zen Dots", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .nav {
   height: var(--header-height);
@@ -17,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-semi);
+  opacity: 0;
 }
 .wrapper {
   position: fixed; /* Keep navbar fixed at the top */
@@ -24,14 +25,14 @@
   left: 0;
   width: 100%; /* Ensure it spans the full width */
   padding: 1em;
-  height: 108px; /* Height of your navbar */
+  height: 85px; /* Height of your navbar */
   line-height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #000000; /* Ensure the background stays visible */
   z-index: 1000;
+  background-color: none;
+  font-weight: 500;
 }
 
 .wrapper .logo {
@@ -44,15 +45,18 @@
   display: flex;
   color: #ffffff;
   font-size: 50px;
-  font-weight: 600;
   text-decoration: none;
   align-items: center; /* Align the image and text inside the anchor tag */
+  font-weight: 500;
+  letter-spacing: 0.07em;
 }
 
 .wrapper .logo img {
+  position: relative;
+  left: 30px;
   width: 70px; /* Increase the image size */
-  margin-right: 10px; /* Optional: Space between the image and text */
-  height: auto; /* Decreased height */
+  margin-right: 60px; /* Optional: Space between the image and text */
+  height: 65px; /* Decreased height */
   line-height: 60px;
 }
 .wrapper .nav-links {
@@ -65,15 +69,16 @@
 .nav-links li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 19.5px;
   font-weight: 500;
   padding: 1em;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 .nav-links li a:hover {
-  background: #787878;
+  background: #4f4f4f;
   border-radius: 5px;
+  font-weight: 600;
 }
 .nav-links .mobile-item {
   display: none;
@@ -95,7 +100,7 @@
   top: 100px;
   z-index: 9999;
   transition: all 0.3s ease;
-  top: 85px;
+  top: 65px;
 }
 .nav-links li:hover .mega-box {
   opacity: 1;
@@ -103,26 +108,25 @@
   top: 100px;
   z-index: 9999;
   transition: all 0.3s ease;
-  top: 85px;
-  left: 51%;
+  top: 65px;
+  left: 60%;
 }
 .drop-menu li a {
   position: relative;
   width: 100%;
   display: block;
   padding: 0 0 0 15px;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 0px;
 }
 .mega-box {
   position: absolute;
-  width: 600px;
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
 }
 .mega-box .content {
-  width: 700px;
+  width: 600px;
   background: #000000;
   border-radius: 5px;
   padding: 1em;
@@ -131,14 +135,9 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 .mega-box .content .row {
-  width: calc(25% 70px);
+  width: 600px;
   line-height: 45px;
   margin: 0;
-}
-
-.content .row .mega-links {
-  margin-left: -2px;
-  border-left: 1px solid rgba(255, 255, 255, 0.09);
 }
 .row .mega-links li {
   padding: 0 20px;
@@ -153,7 +152,8 @@
   text-align: left;
 }
 .row .mega-links li a:hover {
-  color: #000000;
+  color: #ffffff;
+  font-weight: 600;
 }
 .wrapper .btn {
   color: #000000;
@@ -296,675 +296,152 @@ nav input {
 html {
   /* Create a snapping rule on the html element */
   scroll-snap-type: y mandatory;
-
+  max-width: 100%;
+  overflow-x: hidden;
   /* Create a timeline scope, so we can target any element on the page */
   timeline-scope: --section, --main, --site-header;
 }
 
-/* We'll want to match these colors for the best melty effect */
-/* But play around with them (and add a color to section) to see happens */
-body,
-.content {
-  background-image: linear-gradient(
-    0deg,
-    hsl(234deg 67% 28%) 0%,
-    hsl(239deg 65% 24%) 12%,
-    hsl(244deg 73% 19%) 19%,
-    hsl(246deg 89% 15%) 24%,
-    hsl(246deg 100% 13%) 31%,
-    hsl(0deg 0% 0%) 76%
-  );
+@keyframes flowUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* We'll want to match these colors for the best melty effect */
+/* But play around with them (and add a color to section) to see happens */
+
 main {
-  top: 50px;
-  padding: 20px;
-  padding-bottom: 285px;
+  top: 0;
+  padding: 0;
+  padding-bottom: 50px;
 }
 
 .section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  view-timeline: --section;
-  height: 100dvh;
+  /* Remove scroll-snap properties */
+  scroll-snap-align: unset;
+  scroll-snap-stop: unset;
+  view-timeline: unset;
+  height: autp; /* Allow sections to expand based on content */
+  min-height: 100vh; /* Ensure each section takes at least full viewport height */
+  position: relative;
+  width: 100%;
+  background: rgb(2, 0, 34);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 34, 1) 15%,
+    rgba(53, 51, 205, 1) 100%
+  );
 }
+
 #snappingcontent {
-  position: absolute;
-  top: 500px;
+  position: static; /* Remove absolute positioning */
+  top: auto;
 }
 
 main .content {
-  overflow: hidden;
-  position: fixed;
-  inset: 0;
-  --contrast: 4;
-  --blur: 0.5rem;
-  animation: blink ease-in-out both;
-  animation-timeline: --section;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    filter: blur(var(--blur)) contrast(var(--contrast));
-    opacity: 0;
-    visibility: hidden;
-  }
-  50% {
-    filter: blur(0) contrast(1);
-    opacity: 1;
-    visibility: visible;
-  }
+  overflow: visible;
+  position: static;
+  inset: auto;
+  animation: none; /* Remove animation timeline */
+  background-color: initial;
 }
 
 body .content {
   text-align: center; /* Center text inside .content */
 }
 
+#Home {
+  padding: 0;
+}
+
 #Home h1 {
-  line-height: 1.8em;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 200px;
-  left: 100px;
-  font-size: 60px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-  color: #ffffff;
-}
-
-/* Container for the slides */
-.slides {
-  right: 0px;
-  height: 130vh;
-  width: 100%;
-  top: 50px;
-  overflow: hidden;
-  position: relative;
-  z-index: -1;
-}
-
-/* Each individual slide */
-.slide {
-  position: absolute;
-  height: 100%;
-  opacity: 0;
-  inset: 0;
-  animation: slide-show 16s infinite;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.4); /* Reduces image brightness */
-}
-
-/* Apply delay for each slide */
-.slide-2 {
-  animation-delay: 4s;
-}
-
-.slide-3 {
-  animation-delay: 8s;
-}
-
-.slide-4 {
-  animation-delay: 12s;
-}
-
-/* Image style within each slide */
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Keyframes for the sliding animation */
-@keyframes slide-show {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  20%,
-  30% {
-    opacity: 1;
-    transform: scale(1.03); /* Added "transform" for scaling effect */
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-#spirittop {
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 150px;
-  left: 20px;
-  font-size: 70px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
   line-height: 1.5em;
-  width: 1500px;
-}
-
-#spiritmiddle {
-  color: #ffffff;
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 360px;
-  left: 20px;
-  font-size: 30px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  width: 1500px;
-}
-
-#spiritbuttom {
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 550px;
-  left: 20px;
-  font-size: 35px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  width: 1500px;
-}
-
-#spiritimg {
-  z-index: -1;
-  position: absolute;
-  opacity: 0.5;
-  right: 0;
-  left: 0;
-  top: 70px;
-  bottom: 0;
-  width: 100%;
-  height: 800px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(0.5); /* Alternative way to reduce opacity */
-}
-
-#Abouttop {
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 250px;
-  right: 70px;
-  font-size: 20px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: justify;
-  line-height: 2;
-  width: 700px;
-}
-#Aboutbuttom {
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 400px;
-  right: 70px;
-  font-size: 20px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: justify;
-  line-height: 2;
-  width: 700px;
-}
-#Aboutimg {
-  z-index: -1;
-  position: absolute;
-  opacity: 0.5;
-  right: 0;
-  left: 0;
-  top: 100px;
-  bottom: 0;
-  width: 100%;
-  height: 900px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(0.3); /* Alternative way to reduce opacity */
-}
-#Firsticon1 {
-  position: absolute;
-  z-index: 0;
-  top: 450px;
-  left: 200px;
-  width: 400px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(1);
-}
-#Firsticon2 {
-  position: absolute;
-  z-index: 0;
-  top: 250px;
-  left: 265px;
-  width: 300px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(1);
-}
-#Established h1 {
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 195px;
-  left: 200px;
-  font-size: 70px;
-  font-weight: 100px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-#Established h5 {
-  font-weight: 100px;
-  color: #d89695;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 280px;
-  left: 200px;
-  font-size: 25px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-#Established p {
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 400px;
-  left: 200px;
-  font-size: 20px;
-  font-weight: 10px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: justify;
-  line-height: 1.8em;
-  word-spacing: 0.1em;
-  width: 600px;
-}
-
-#Teamicon {
-  z-index: 0;
-  position: absolute;
-  top: 180px;
-  right: 250px;
-  width: 400px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-}
-
-#Lin {
-  z-index: -1;
-  position: absolute;
-  opacity: 0.5;
-  right: 0;
-  left: 0;
-  top: 70px;
-  bottom: 0;
-  width: 100%;
-  height: 800px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(0.4); /* Alternative way to reduce opacity */
-}
-
-#OurMission h1 {
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 180px;
-  left: 450px;
-  font-size: 90px;
-  font-weight: 100px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-
-#OurMission P {
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 400px;
-  left: 350px;
-  width: 900px;
-  font-size: 35px;
-  font-weight: 100px;
-  z-index: 0;
-  text-align: justify;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-}
-
-#OurMission img {
-  z-index: -1;
-  position: absolute;
-  opacity: 0.5;
-  right: 0;
-  left: 0;
-  top: 50px;
-  bottom: 0;
-  width: 100%;
-  height: 1000px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(0.4); /* Alternative way to reduce opacity */
-}
-
-#Departments h1 {
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 140px;
-  left: 350px;
-  font-size: 70px;
-  font-weight: 100px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-#top {
-  font-weight: 100px;
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 240px;
-  left: 450px;
-  font-size: 22px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-#Strategy {
-  color: #d89695;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 335px;
-  left: 500px;
-  font-size: 30px;
-  font-weight: 100px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-#Electrical {
-  color: #d89695;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 440px;
-  left: 600px;
-  font-size: 30px;
-  font-weight: 100px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-
-#Mechanical {
-  color: #d89695;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 550px;
-  left: 700px;
-  font-size: 30px;
-  font-weight: 100px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-
-#backgroundimage {
-  z-index: -1;
-  position: absolute;
-  opacity: 0.5;
-  right: 0;
-  left: 0;
-  top: -300px;
-  bottom: 0;
-  width: 100%;
-  height: 1500px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(0.4); /* Alternative way to reduce opacity */
-}
-
-#Strategyicon {
-  position: absolute;
-  z-index: 0;
-  top: 290px;
-  width: 70px;
-  left: 400px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(1); /* Alternative way to reduce opacity */
-}
-
-#Electricalicon {
-  position: absolute;
-  z-index: 0;
-  top: 395px;
-  left: 500px;
-  width: 70px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(1); /* Alternative way to reduce opacity */
-}
-#Mechanicalicon {
-  position: absolute;
-  z-index: 0;
-  top: 505px;
-  left: 600px;
-  width: 70px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(1); /* Alternative way to reduce opacity */
-}
-
-#buttom {
-  font-weight: 100px;
-  color: #ffffff;
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 650px;
-  left: 250px;
-  font-size: 22px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-
-#Sponsor img {
-  z-index: -1;
-  position: absolute;
-  left: 150px;
-  top: 110px;
-  bottom: 0;
-  width: 1200px;
-  height: 600px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-}
-
-#backgroundtext {
-  position: absolute;
-  font-size: 270px;
-  opacity: 0.15;
-  color: white;
-  top: 300px;
-}
-
-#awards {
-  position: absolute;
-  color: white;
   top: 170px;
-  line-height: 2.3em;
-  left: 420px;
+  left: 200px;
+  font-size: 70px;
+  font-weight: 900;
+  z-index: 1;
+  text-align: left;
+  color: #ffffff;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
-#awards h2 {
-  font-size: 30px;
-  color: #d89695;
+#Aboutimg {
+  z-index: 2;
+  opacity: 0.5;
+  right: 0px;
+  margin-top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 105%;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(1); /* Alternative way to reduce opacity */
 }
-
-#awards h3 {
-  font-size: 25px;
-  color: #d89695;
+#Establishedimg {
+  z-index: 2;
+  opacity: 0.5;
+  right: 0px;
+  margin-top: -4px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(1); /* Alternative way to reduce opacity */
 }
-
-#Awards h1 {
-  position: absolute;
+#Departmentsimg {
   z-index: 0;
-  color: white;
-  top: 300px;
-  font-size: 270px;
-  opacity: 0.2;
+  opacity: 0.5;
+  right: -90px;
+  margin-top: -4px;
+  bottom: 0;
+  width: 100%;
+  height: 120%;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(1); /* Alternative way to reduce opacity */
+}
+#Sponsorimg {
+  z-index: 0;
+  opacity: 0.5;
+  right: -90px;
+  margin-top: -4px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(1); /* Alternative way to reduce opacity */
 }
 #Awards img {
-  z-index: -1;
-  position: absolute;
+  z-index: 0;
   opacity: 0.5;
-  right: 0;
-  left: 0;
-  top: -150px;
+  right: -90px;
+  margin-top: -4px;
   bottom: 0;
   width: 100%;
-  height: 1400px;
+  height: 90%;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
-  filter: brightness(0.4); /* Alternative way to reduce opacity */
+  filter: brightness(1); /* Alternative way to reduce opacity */
 }
-
-#Location h1 {
-  color: white;
-  margin: 0;
-  z-index: 0;
-  opacity: 0.4;
-  font-size: 120px;
-}
-
-#left {
-  rotate: 270deg;
-  position: absolute;
-  top: 350px;
-  left: -280px;
-}
-
-#right {
-  rotate: 90deg;
-  position: absolute;
-  top: 350px;
-  right: -280px;
-}
-
-#Location img {
-  z-index: -1;
-  position: absolute;
-  opacity: 0.5;
-  right: 0;
-  left: 0;
-  top: -40px;
-  bottom: 0;
-  width: 100%;
-  height: 1000px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(0.5); /* Alternative way to reduce opacity */
-}
-
-#Location iframe {
-  position: absolute;
-  top: 200px;
-  left: 380px;
-}
-
-#Calendar h1 {
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
-  position: absolute;
-  top: 275px;
-  left: 50px;
-  font-size: 70px;
-  z-index: 0;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  text-align: left;
-}
-
 @keyframes flowUp {
   0% {
     opacity: 0;
@@ -975,37 +452,26 @@ body .content {
     transform: translateY(0);
   }
 }
+
+#model {
+  background-color: #000000;
+  margin-top: -4px;
+}
+
 #model h1 {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
   top: 275px;
-  right: 235px;
+  right: 300px;
   font-size: 60px;
-  z-index: 0;
+  z-index: 1;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
   text-align: left;
   color: white;
 }
-
-#model img {
-  z-index: -1;
-  position: absolute;
-  opacity: 0.5;
-  right: 0;
-  left: -20px;
-  top: -370px;
-  bottom: 0;
-  width: 1700px;
-  height: 1600px;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(0.3); /* Alternative way to reduce opacity */
-}
-
 #model .box {
   background-color: #ffffff;
   letter-spacing: 0.5em;
@@ -1014,7 +480,7 @@ body .content {
   transition: 0.5s linear;
   position: absolute;
   top: 450px;
-  right: 505px;
+  right: 405px;
   display: block;
   overflow: hidden;
   padding: 15px;
@@ -1024,6 +490,7 @@ body .content {
   font-weight: 900;
   text-align: center;
   color: white;
+  z-index: 1;
 }
 
 .box:before {
