@@ -5,8 +5,8 @@ app = Flask(__name__)
 # app.secret_key = '####'
 
 # login_manager = LoginManager()
-# login_manager.init_app(app)
-# login_manager.session_protection = 'strong'
+# login_manager.init_app(app)   
+# login_manager.session_protection = 'strong'pip
 # login_manager.login_view = 'login'
 # login_manager.login_message = '請先登入'
 
@@ -34,10 +34,10 @@ app = Flask(__name__)
 #     user.is_authenticated = request.form['password'] == users[user_role]["password"]
 #     return user
 
-# # 根路徑，渲染 HTML 模板
-# @app.route('/')
-# def home():
-#     return render_template('home.html')
+# 根路徑，渲染 HTML 模板
+@app.route('/')
+def home():
+    return render_template('home.html')
 
 # @app.route('/login', methods=['GET', 'POST'])
 # def login():

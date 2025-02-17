@@ -364,13 +364,15 @@ body .content {
 
 #Home {
   padding: 0;
-  background: rgb(13, 27, 69);
-  background: rgb(13, 27, 69);
-  background: linear-gradient(
-    160deg,
-    rgba(13, 27, 69, 1) 28%,
-    rgba(209, 172, 169, 1) 89%
-  );
+  background-color: hsla(243, 100%, 6%, 1);
+  background-image: radial-gradient(
+      at 18% 77%,
+      hsla(220, 31%, 8%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 100%, hsla(220, 100%, 27%, 1) 0px, transparent 50%),
+    radial-gradient(at 13% 18%, hsla(220, 100%, 27%, 1) 0px, transparent 50%),
+    radial-gradient(at 14% 100%, hsla(243, 100%, 27%, 1) 0px, transparent 50%);
 }
 
 #Home h2 {
@@ -378,7 +380,7 @@ body .content {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 190px;
+  top: 210px;
   left: 150px;
   font-size: 50px;
   font-weight: 900;
@@ -395,7 +397,7 @@ body .content {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 340px;
+  top: 360px;
   left: 150px;
   font-size: 90px;
   font-weight: 900;
@@ -408,7 +410,57 @@ body .content {
 }
 
 #About {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 130vh;
+}
+
+#About h2 {
+  position: absolute;
+  top: 90px;
+  left: 37%;
+}
+
+#About p {
+  position: absolute;
+  top: 350px;
+  left: 5%;
+  width: 90%;
+  text-align: justify;
+  font-weight: 500;
+}
+
+.reveal_text span {
+  color: rgba(128, 128, 128, 0.2);
+  background-image: linear-gradient(
+    90deg,
+    rgba(13, 29, 88, 1),
+    rgba(2, 0, 34, 1)
+  );
+  background-clip: text;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  animation: reveal linear forwards;
+  animation-timeline: view();
+  filter: brightness(300%);
+}
+
+.reveal_text h2 span {
+  animation-range-start: cover 20vh;
+  animation-range-end: cover 40vh;
+  font-size: 6em;
+}
+
+.reveal_text p span {
+  animation-range-start: cover 25vh;
+  animation-range-end: cover 60vh;
+  font-size: 3em;
+}
+
+@keyframes reveal {
+  to {
+    background-size: 100% 100%;
+  }
 }
 
 #Establishedimg {
@@ -500,8 +552,8 @@ body .content {
   height: auto;
   transition: 0.5s linear;
   position: absolute;
-  top: 375px;
-  right: 45px;
+  top: 385px;
+  right: 65px;
   display: block;
   overflow: hidden;
   padding: 15px;

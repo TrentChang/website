@@ -95,8 +95,8 @@ function animate() {
 
 // Position the canvas
 renderer.domElement.style.position = "absolute";
-renderer.domElement.style.top = "-35px";
-renderer.domElement.style.left = "200px";
+renderer.domElement.style.top = "15px";
+renderer.domElement.style.left = "160px";
 renderer.domElement.style.zIndex = "3";
 
 // Start animation
