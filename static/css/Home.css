@@ -37,7 +37,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background-color: none;
+  background-color: rgb(8, 10, 28);
   font-weight: 500;
 }
 
@@ -92,7 +92,7 @@
 .nav-links .drop-menu {
   position: absolute;
   border-radius: 5px;
-  background: #000000;
+  background: rgb(8, 10, 28);
   width: 180px;
   line-height: 45px;
   top: 85px;
@@ -133,7 +133,7 @@
 }
 .mega-box .content {
   width: 600px;
-  background: #000000;
+  background: rgb(8, 10, 28);
   border-radius: 5px;
   padding: 1em;
   display: flex;
@@ -293,12 +293,14 @@
     font-size: 19px;
   }
 }
+
 nav input {
   display: none;
 }
 
 @layer base, rhythm, layout, components, default, overwrites;
 
+/*maincontent*/
 html {
   /* Create a snapping rule on the html element */
   scroll-snap-type: y mandatory;
@@ -380,7 +382,7 @@ body .content {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 210px;
+  top: 190px;
   left: 150px;
   font-size: 50px;
   font-weight: 900;
@@ -397,7 +399,7 @@ body .content {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 360px;
+  top: 340px;
   left: 150px;
   font-size: 90px;
   font-weight: 900;
@@ -409,25 +411,50 @@ body .content {
   animation-delay: 0.1s;
 }
 
+#Home p {
+  line-height: 1.3em;
+  margin: 0;
+  padding-right: 20px; /* Space between text and image */
+  position: absolute;
+  top: 600px;
+  left: 150px;
+  font-size: 30px;
+  font-weight: 500;
+  z-index: 1;
+  text-align: left;
+  color: #ffffff;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
 #About {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(8, 10, 28);
   width: 100%;
-  height: 130vh;
+  height: 120vh;
 }
 
 #About h2 {
-  position: absolute;
-  top: 90px;
-  left: 37%;
+  position: relative;
+  top: 100px;
+  font-size: 6em;
+  text-align: center;
 }
 
 #About p {
   position: absolute;
-  top: 350px;
-  left: 5%;
-  width: 90%;
+  top: 250px;
+  left: 10%;
+  width: 80%;
   text-align: justify;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+#About img {
+  position: absolute;
+  left: 20%;
+  top: 550px;
 }
 
 .reveal_text span {
@@ -448,13 +475,11 @@ body .content {
 .reveal_text h2 span {
   animation-range-start: cover 20vh;
   animation-range-end: cover 40vh;
-  font-size: 6em;
 }
 
 .reveal_text p span {
   animation-range-start: cover 25vh;
   animation-range-end: cover 60vh;
-  font-size: 3em;
 }
 
 @keyframes reveal {
@@ -463,88 +488,71 @@ body .content {
   }
 }
 
-#Establishedimg {
+#Established {
+  background-color: rgb(8, 10, 28);
+  width: 100%;
+  height: 110vh;
+}
+
+#Established h2 {
+  position: absolute;
+  top: 70px;
+  left: 54%;
+  font-size: 110px;
+}
+
+#up {
+  position: absolute;
+  top: 220px;
+  left: 55%;
+  width: 40%;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+#down {
+  position: absolute;
+  top: 670px;
+  left: 5%;
+  width: 60%;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+#All {
   z-index: 2;
   opacity: 0.5;
-  right: 0px;
   margin-top: -4px;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(1); /* Alternative way to reduce opacity */
-}
-#Departmentsimg {
-  z-index: 0;
-  opacity: 0.5;
-  right: -90px;
-  margin-top: -4px;
-  bottom: 0;
-  width: 100%;
-  height: 120%;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(1); /* Alternative way to reduce opacity */
-}
-#Sponsorimg {
-  z-index: 0;
-  opacity: 0.5;
-  right: -90px;
-  margin-top: -4px;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(1); /* Alternative way to reduce opacity */
-}
-#Awards img {
-  z-index: 0;
-  opacity: 0.5;
-  right: -90px;
-  margin-top: -4px;
-  bottom: 0;
-  width: 100%;
-  height: 90%;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
-  filter: brightness(1); /* Alternative way to reduce opacity */
-}
-@keyframes flowUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#model {
-  background-color: #000000;
-  margin-top: -4px;
-}
-
-#model h1 {
-  margin: 0;
-  padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 275px;
-  right: 300px;
-  font-size: 60px;
-  z-index: 1;
+  top: 90px;
+  left: 30px;
+  bottom: 0;
+  width: 50%;
+  height: 55%;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
-  text-align: left;
-  color: white;
+  filter: brightness(1); /* Alternative way to reduce opacity */
 }
+
+#Team {
+  z-index: 2;
+  opacity: 0.5;
+  margin-top: -4px;
+  position: absolute;
+  top: 580px;
+  left: 1100px;
+  bottom: 0;
+  width: 15%;
+  height: 32%;
+  transform: translateY(50px);
+  animation: flowUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+  filter: brightness(1); /* Alternative way to reduce opacity */
+}
+
 #modelbox {
   background-color: #ffffff;
   letter-spacing: 0.5em;
@@ -552,7 +560,7 @@ body .content {
   height: auto;
   transition: 0.5s linear;
   position: absolute;
-  top: 385px;
+  top: 400px;
   right: 65px;
   display: block;
   overflow: hidden;
@@ -617,4 +625,190 @@ button {
   outline: none;
   border: none;
   background: transparent;
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0.2;
+    scale: 0.8;
+    translate: 0 10%;
+  }
+}
+
+.photo {
+  animation: animate-in ease-in both;
+  animation-timeline: view();
+  animation-range: entry 25% cover calc(50% - 10vh);
+}
+
+@layer components {
+  ul.photos {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+    gap: 1.3em;
+  }
+
+  .photo {
+    transform-origin: 50% 100%;
+    border-radius: 1em;
+    overflow: hidden;
+
+    display: flex;
+    align-items: end;
+    width: min-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .photo img {
+    display: block;
+    width: auto;
+    height: 75vmin;
+    max-height: 20em;
+  }
+
+  li:nth-child(5n),
+  li:nth-child(7n + 3),
+  li:nth-child(3n) {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+}
+
+@layer reset {
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul[class] {
+    list-style: none;
+  }
+}
+
+#Departments {
+  background-color: rgb(8, 10, 28);
+}
+
+#depicon,
+#depicon2 {
+  width: 120px;
+  height: 150px;
+}
+
+#depicon3 {
+  width: 120px;
+  height: 120px;
+}
+
+.photos {
+  position: absolute;
+  left: 38%;
+  top: 110px;
+}
+
+#ee {
+  color: white;
+  font-weight: 700;
+  font-size: 70px;
+  position: absolute;
+  top: 150px;
+  left: 48%;
+}
+
+#me {
+  color: white;
+  font-weight: 700;
+  font-size: 70px;
+  position: absolute;
+  top: 305px;
+  left: 48%;
+}
+
+#sp {
+  color: white;
+  font-weight: 700;
+  font-size: 70px;
+  position: absolute;
+  top: 445px;
+  left: 48%;
+}
+
+#vertical-line {
+  height: 500px;
+  border-left: solid 10px white;
+  position: absolute;
+  left: 35%;
+  top: 125px;
+}
+
+#Departments h2 {
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  position: absolute;
+  top: 255px;
+  left: 3%;
+}
+
+#Sponsor {
+  background-color: rgb(8, 10, 28);
+  height: 100vh;
+}
+
+#Sponsor img {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  width: 48px;
+  height: 27px;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.wtools {
+  width: 48px;
+  height: 27px;
+}
+.pmc {
+  width: 48px;
+  height: 27px;
+}
+.multicraft {
+  width: 48px;
+  height: 27px;
+}
+.drplayer {
+  width: 48px;
+  height: 27px;
+}
+.ctsp {
+  width: 48px;
+  height: 27px;
+}
+.corning {
+  width: 48px;
+  height: 27px;
+}
+.coagent {
+  width: 48px;
+  height: 27px;
 }

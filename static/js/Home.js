@@ -9,7 +9,7 @@ const renderer = new THREE.WebGLRenderer({
   alpha: true,
 });
 renderer.setSize(w, h);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Optimize for high DPI displays
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
 const fov = 75;
@@ -22,11 +22,14 @@ camera.position.z = 2;
 const scene = new THREE.Scene();
 scene.background = null;
 
-// Controls
+// Configure OrbitControls to only allow rotation
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableZoom = false;
-controls.enableDamping = true; // Add smooth damping to controls
+controls.enableZoom = false; // Disable zoom
+controls.enablePan = false; // Disable panning
+controls.enableDamping = true;
 controls.dampingFactor = 0.05;
+controls.minDistance = 2; // Lock the distance
+controls.maxDistance = 2; // Lock the distance
 
 // Geometry and Materials
 const geo = new THREE.IcosahedronGeometry(0.8, 4);
@@ -84,7 +87,7 @@ function animate() {
 
   requestAnimationFrame(animate);
 
-  // Smooth rotation
+  // Smooth auto-rotation (optional - comment out if you only want manual rotation)
   mesh.rotation.y = elapsedTime * 0.3;
 
   // Update controls
@@ -95,8 +98,8 @@ function animate() {
 
 // Position the canvas
 renderer.domElement.style.position = "absolute";
-renderer.domElement.style.top = "15px";
-renderer.domElement.style.left = "160px";
+renderer.domElement.style.top = "-5px";
+renderer.domElement.style.left = "200px";
 renderer.domElement.style.zIndex = "3";
 
 // Start animation

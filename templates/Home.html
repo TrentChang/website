@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team 7636</title>
     <link
       rel="icon"
@@ -54,9 +54,8 @@
             <ul class="drop-menu">
               <li><a href="#Established">Established</a></li>
               <li><a href="#Departments">Departments</a></li>
-              <li><a href="#Awards">Awards</a></li>
               <li><a href="#Sponsor">Sponsor</a></li>
-              
+              <li><a href="#Awards">Awards</a></li>
             </ul>
           </li>
           <li>
@@ -131,46 +130,59 @@
       <section id="Home" class="section">
         <div class="content">
           <h2>WE ' RE <br /> FRC TEAM</h2>     
-          <h1>7636 <br /> ROBOMANIA</h1>      
+          <h1>7636 <br /> ROBOMANIA</h1>
+          <p>"A group of students who are passionate about robotics"</p>      
           <script id="model1" type="module" src="{{ url_for('static', filename='js/Home.js')}}"></script>
           <span id='modelbox' class="box">Learn more</span>
       </section>
       <section id="About" class="section">
         <section class="reveal_text">
           <h2>
-            <span>About</span>
+            <span>ABOUT "FIRST"</span>
           </h2>
           <p>
-            <span>FIRST, as "For Inspiration and Recognition of Science and Technology" is an international youth organization that operates the FIRST Robotics Competition.Founded by Dean Kamen and Woodie Flowers in 1989, its expressed goal is to develop ways to inspire students in engineering and technology fields. Its philosophy is expressed by the organization as coopetition and gracious professionalism.</span>
+            <span><strong><b>FIRST</b></strong>, as "For Inspiration and Recognition of Science and Technology" is an international youth organization that operates the FIRST Robotics Competition. Founded by Dean Kamen and Woodie Flowers in 1989, its expressed goal is to develop ways to inspire students in engineering and technology fields. Its philosophy is expressed by the organization as coopetition and gracious professionalism.</span>
           </p>
+          <img src="{{ url_for('static', filename='images/firsticon1.png')}}">
         </section>
       </section>
       <section id="Established" class="section">
-        <div class="content">
-          <img id="Establishedimg" src="{{ url_for('static', filename='images/2.png')}}">
-        </div>
+        <section class="reveal_text">
+          <h2>
+            <span>ROBOMANIA</span>
+          </h2>
+          <p id="up">
+            <span>Established in 2018 Taichung, Taiwan with just 13 members, <b>Robomania</b> have grown into a diverse team, representing various ages, genders, and nationalities. Our goal is to promote FIRST to students and the public in order to inspire individuals to learn more about STEAM.</span>
+          </p>
+          <p id="down">
+            <span>FRC <b>not only</b> emphasizes the 
+              core principles of STEM, but also incorporates Arts to promote creativity, design, and communication, making it a holistic educational experience.</span>
+          </p>
+          <img id="All" src="{{url_for('static', filename='images/ALL.jpg')}}">
+          <img id="Team" src="{{url_for('static', filename='images/teamicon2.png')}}">
+        </section>  
       </section>
       <section id="Departments" class="section">
-        <div class="content">
-          <img id="Departmentsimg" src="{{url_for('static', filename='images/3.png')}}">
-        </div>
-      </section>
-      <section id="Awards" class="section">
-        <div class="content">
-        <img src="{{url_for('static', filename='images/4.png')}}">
-        </div>
+        <ul class="photos">
+          <li class="photo"><img id="depicon3" src="{{url_for('static', filename='images/depicon3.png')}}" draggable="false"></li>
+          <li class="photo"><img id="depicon2" src="{{url_for('static', filename='images/depicon2.png')}}" draggable="false"></li>
+          <li class="photo"><img id="depicon" src="{{url_for('static', filename='images/depicon.png')}}" draggable="false"></li>
+        </ul>
+        <p id="ee">Electrical Engineering</p>
+        <p id="me">Mechanical Engineering</p>
+        <p id="sp">Strategy & Public Relations</p>
+        <h2>Team <br>Departments</h2>
+        <div id="vertical-line"></div>
       </section>
       <section id="Sponsor" class="section">
-        <div class="content">
-          <img id="Sponsorimg" src="{{url_for('static', filename='images/5.png')}}">
-        </div>
+        <img id="wtools" src="{{url_for('static', filename='images/wtools.png')}}">
+        <img id="pmc" src="{{url_for('static', filename='images/pmc.png')}}">
+        <img id="multicraft" src="{{url_for('static', filename='images/multicraft.png')}}">
+        <img id="drplayer" src="{{url_for('static', filename='images/drplayer.png')}}">
+        <img id="ctsp" src="{{url_for('static', filename='images/ctsp.png')}}">
+        <img id="corning" src="{{url_for('static', filename='images/corning.png')}}">
+        <img id="coagent" src="{{url_for('static', filename='images/coagent.png')}}">
       </section>
-      <section id="model" class="section">
-        <div class="content">
-          <h1>Latest Robot</h1>
-        </div>
-      </section>
-      <footer><h1>Developer: Trent:) and Milkysheep <br> UI design: poorbear</h1></footer>
     </main>
   </body>
 </html>
