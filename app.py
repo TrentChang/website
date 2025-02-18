@@ -38,7 +38,7 @@ app = Flask(__name__)
 # 根路徑，渲染 HTML 模板
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('Home.html')
 
 # @app.route('/login', methods=['GET', 'POST'])
 # def login():
