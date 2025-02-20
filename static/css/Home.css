@@ -57,12 +57,12 @@
   letter-spacing: 0.07em;
 }
 
-.wrapper .logo img {
+.wrapper a img {
   position: relative;
   left: 30px;
   width: 70px; /* Increase the image size */
   margin-right: 60px; /* Optional: Space between the image and text */
-  height: 65px; /* Decreased height */
+  height: 70px; /* Decreased height */
   line-height: 60px;
 }
 .wrapper .nav-links {
@@ -711,7 +711,7 @@ button {
 .photos {
   position: absolute;
   left: 38%;
-  top: 110px;
+  top: 140px;
 }
 
 #ee {
@@ -719,7 +719,7 @@ button {
   font-weight: 700;
   font-size: 70px;
   position: absolute;
-  top: 150px;
+  top: 170px;
   left: 48%;
 }
 
@@ -728,7 +728,7 @@ button {
   font-weight: 700;
   font-size: 70px;
   position: absolute;
-  top: 305px;
+  top: 345px;
   left: 48%;
 }
 
@@ -737,7 +737,7 @@ button {
   font-weight: 700;
   font-size: 70px;
   position: absolute;
-  top: 445px;
+  top: 475px;
   left: 48%;
 }
 
@@ -754,7 +754,7 @@ button {
   text-align: center;
   font-size: 70px;
   position: absolute;
-  top: 255px;
+  top: 285px;
   left: 3%;
 }
 
@@ -811,4 +811,162 @@ button {
 .coagent {
   width: 48px;
   height: 27px;
+}
+
+#threedd {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: 0px;
+  left: 700px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #e9eef2;
+  --color: #000000;
+  --color-2: rgb(68, 68, 68);
+  --color-3: #666;
+  --transition: all 0.25s ease 0s;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  background: var(--background);
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem;
+}
+
+.copyright {
+  padding: 2rem 0 0 0;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-3);
+  text-align: center;
+  border-top: 1px solid var(--color-3);
+}
+
+.footer-nav {
+  padding: 1rem 0;
+}
+
+.footer-nav .col {
+  max-width: 300px;
+}
+
+p.site-decription {
+  color: var(--color-3);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.social-medias a {
+  color: var(--color-2);
+  width: 3rem;
+  height: 3em;
+  border: 2px solid var(--color-2);
+  border-radius: 50%;
+}
+
+.social-medias svg {
+  vertical-align: middle;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.flex-jc-start {
+  justify-content: flex-start;
+}
+
+.flex-around {
+  justify-content: space-around;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-g-1 {
+  gap: 1rem;
+}
+
+.col {
+  flex: 1;
+}
+
+/* Added padding to move lists right */
+.col-title {
+  padding-left: 5rem;
+  margin-top: 10px;
+}
+
+.col-list ul {
+  padding-left: 5rem;
+}
+
+.col-list ul li {
+  list-style: none;
+}
+
+.col-list ul li a {
+  text-decoration: none;
+  color: var(--color-3);
+  transition: var(--transition);
+}
+
+.col-list ul li a:hover,
+.col-list ul li a:focus {
+  color: var(--color);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px) {
+  .footer-nav {
+    flex-direction: column;
+  }
 }
