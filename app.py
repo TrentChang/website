@@ -39,6 +39,18 @@ app = Flask(__name__)
 def home():
     return render_template('Home.html')
 
+@app.route('/Home')
+def Home():
+    return render_template('Home.html')
+
+@app.route('/Robots')
+def Robots():
+    return render_template('Robots.html')
+
+@app.route('/Donate')
+def Donate():
+    return render_template('Donate.html')
+
 # @app.route('/login', methods=['GET', 'POST'])
 # def login():
 #     if request.method == 'GET':
