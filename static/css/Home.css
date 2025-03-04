@@ -843,10 +843,11 @@ button {
 #Sponsor p {
   color: #ffffff;
   position: absolute;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   top: 360px;
-  left: 33%;
+  left: 37%;
+  text-align: center;
 }
 
 .Sponsor {
@@ -902,9 +903,9 @@ button {
 
 .item2 img {
   position: relative;
-  top: 30px;
-  width: 200px;
-  height: 40px;
+  top: 38px;
+  width: 180px;
+  height: 30px;
 }
 
 .item3 {
@@ -925,10 +926,10 @@ button {
 
 .item4 img {
   position: relative;
-  top: 20px;
+  top: 10px;
   left: 6px;
   width: 190px;
-  height: 60px;
+  height: 70px;
 }
 
 .item5 {
@@ -975,7 +976,7 @@ button {
   position: relative;
   top: 5px;
   left: 50px;
-  width: 90px;
+  width: 80px;
   height: 90px;
 }
 
@@ -1171,7 +1172,7 @@ footer h1 {
   font-weight: 500;
 }
 
-#Learnmorewaves {
-  position: relative;
-  top: 10px;
+#adressnumber {
+  position: absolute;
+  width: 200px;
 }

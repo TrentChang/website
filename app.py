@@ -1,5 +1,5 @@
 from flask import Flask, config, flash, redirect, render_template, request, send_from_directory, url_for
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+# from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 
 app = Flask(__name__)
 # app.secret_key = '####'
@@ -38,6 +38,10 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('Home.html')
+
+@app.route('/donate')
+def donate():
+    return render_template('Dondate.html')
 
 # @app.route('/login', methods=['GET', 'POST'])
 # def login():
