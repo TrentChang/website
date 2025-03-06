@@ -46,7 +46,7 @@
           <label for="close-btn" class="btn close-btn"
             ><i class="fas fa-times"></i
           ></label>
-          <li><a href="#">HOME</a></li>
+          <li><a href="{{url_for('home')}}#Home">HOME</a></li>
           <li>
             <a href="{{url_for('home')}}#About" class="desktop-item">ABOUT</a>
             <input type="checkbox" id="showDrop" />
@@ -126,13 +126,21 @@
     <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <section id="test"></section>
+    <main>
+        <section id="test"></section>
+        <a href="{{ url_for('donate') }}#donate">
+            <div id="donatebutton" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: rgb(95, 127, 255); color: white; border-radius: 32px; position: fixed; right: 18px; bottom: 18px; box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px; z-index: 9999; cursor: pointer; font-weight: 600; transition: 0.25s; transform: scale(1);">
+              <img src="https://img.icons8.com/?size=100&id=igliuy55hqkp&format=png&color=ffffff" width="45px" height="45px" >
+            </div>
+          </a>
+    </main>
+    
     <footer>
       <div class="container footerContainer">
         <div class="footer-nav flex flex-around flex-start flex-g-1">
           <div class="col flex flex-column flex-start flex-g-1">
             <span class="logo-holder">
-              <h1>ROBOMANIA</h1>
+                <h1><a href="{{url_for('home')}}#Home">ROBOMANIA</a></h1>
             </span>
             <p class="site-description">
               " We're a group of students who are passionate about robotics "<br> - Robomania
@@ -164,7 +172,7 @@
             </div>
           </div>
           <div class="col flex flex-column flex-g-1 flex-start">
-            <h3 class="col-title">ABOUT</h3>
+            <h3 class="col-title"><a href="{{url_for('home')}}#About">ABOUT</a></h3>            
             <nav class="col-list">
               <ul>
                 <li><a href="{{url_for('home')}}#Established">Established</a></li>
@@ -174,7 +182,7 @@
             </nav>
           </div>
           <div class="col flex flex-column flex-g-1 flex-start">
-            <h3 class="col-title" href="{{url_for('home')}}#Learnmore">SEASONS/ROBOTS</h3>
+            <h3 class="col-title"><a href="{{url_for('home')}}#Learnmore">SEASONS/ROBOTS</a></h3>            
             <nav class="col-list">
               <ul>
                 <li><a href="#test">2025 updating...</a></li>
@@ -187,7 +195,7 @@
               </ul>
             </nav>
           </div>
-          <div class="col flex flex-column flex-g-1 flex-start"><h3 class="col-title">ADRESS</h3>
+          <div class="col flex flex-column flex-g-1 flex-start"><h3 class="col-title">ADDRESS</h3>
         <nav class="col-list">
           <ul>
             <li><a  id="adressnumber" href="https://maps.app.goo.gl/X7kqg88FdwWZdBdK8" target="_blank">No. 227, Pinghe Road, Daya District, Taichung City 428, Taiwan</a></li>

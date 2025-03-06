@@ -58,7 +58,7 @@
             </ul>
           </li>
           <li>
-            <a href="#model" class="desktop-item">SEASONS/ROBOTS</a>
+            <a href="#Learnmore" class="desktop-item">SEASONS/ROBOTS</a>
             <input type="checkbox" id="showMega" />
             <label for="showMega" class="mobile-item"></label>
             <div class="mega-box">
@@ -206,7 +206,7 @@
       </section>
       <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 130" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(8, 10, 28, 1)" offset="0%"></stop><stop stop-color="rgba(8, 10, 28, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,52L30,47.7C60,43,120,35,180,39C240,43,300,61,360,62.8C420,65,480,52,540,39C600,26,660,13,720,17.3C780,22,840,43,900,56.3C960,69,1020,74,1080,78C1140,82,1200,87,1260,73.7C1320,61,1380,30,1440,15.2C1500,0,1560,0,1620,4.3C1680,9,1740,17,1800,36.8C1860,56,1920,87,1980,86.7C2040,87,2100,56,2160,45.5C2220,35,2280,43,2340,47.7C2400,52,2460,52,2520,54.2C2580,56,2640,61,2700,69.3C2760,78,2820,91,2880,91C2940,91,3000,78,3060,69.3C3120,61,3180,56,3240,65C3300,74,3360,95,3420,104C3480,113,3540,108,3600,97.5C3660,87,3720,69,3780,54.2C3840,39,3900,26,3960,32.5C4020,39,4080,65,4140,75.8C4200,87,4260,82,4290,80.2L4320,78L4320,130L4290,130C4260,130,4200,130,4140,130C4080,130,4020,130,3960,130C3900,130,3840,130,3780,130C3720,130,3660,130,3600,130C3540,130,3480,130,3420,130C3360,130,3300,130,3240,130C3180,130,3120,130,3060,130C3000,130,2940,130,2880,130C2820,130,2760,130,2700,130C2640,130,2580,130,2520,130C2460,130,2400,130,2340,130C2280,130,2220,130,2160,130C2100,130,2040,130,1980,130C1920,130,1860,130,1800,130C1740,130,1680,130,1620,130C1560,130,1500,130,1440,130C1380,130,1320,130,1260,130C1200,130,1140,130,1080,130C1020,130,960,130,900,130C840,130,780,130,720,130C660,130,600,130,540,130C480,130,420,130,360,130C300,130,240,130,180,130C120,130,60,130,30,130L0,130Z"></path></svg>
       <section id="Learnmore" class="section">
-        <span id='modelbox' class="box">Learn more</span>
+        <a href="{{url_for('robots')}}#test"><span id='modelbox' class="box">Learn more</span></a>
       </section>
       <a href="{{ url_for('donate') }}#donate">
         <div id="donatebutton" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: rgb(95, 127, 255); color: white; border-radius: 32px; position: fixed; right: 18px; bottom: 18px; box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px; z-index: 9999; cursor: pointer; font-weight: 600; transition: 0.25s; transform: scale(1);">
@@ -219,7 +219,7 @@
         <div class="footer-nav flex flex-around flex-start flex-g-1">
           <div class="col flex flex-column flex-start flex-g-1">
             <span class="logo-holder">
-              <h1>ROBOMANIA</h1>
+              <h1><a href="#" text-decoration="none">ROBOMANIA</a></h1>
             </span>
             <p class="site-description">
               " We're a group of students who are passionate about robotics "<br> - Robomania
@@ -251,7 +251,7 @@
             </div>
           </div>
           <div class="col flex flex-column flex-g-1 flex-start">
-            <h3 class="col-title">ABOUT</h3>
+            <h3 class="col-title"><a href="#About">ABOUT</a></h3>            
             <nav class="col-list">
               <ul>
                 <li><a href="#">Established</a></li>
@@ -261,7 +261,7 @@
             </nav>
           </div>
           <div class="col flex flex-column flex-g-1 flex-start">
-            <h3 class="col-title" href="#Learnmore">SEASONS/ROBOTS</h3>
+            <h3 class="col-title"><a href="#Learnmore">SEASONS/ROBOTS</a></h3>            
             <nav class="col-list">
               <ul>
                 <li><a href="{{url_for('robots')}}#test">2025 updating...</a></li>
@@ -274,7 +274,7 @@
               </ul>
             </nav>
           </div>
-          <div class="col flex flex-column flex-g-1 flex-start"><h3 class="col-title">ADRESS</h3>
+          <div class="col flex flex-column flex-g-1 flex-start"><h3 class="col-title">ADDRESS</h3>
         <nav class="col-list">
           <ul>
             <li><a  id="adressnumber" href="https://maps.app.goo.gl/X7kqg88FdwWZdBdK8" target="_blank">No. 227, Pinghe Road, Daya District, Taichung City 428, Taiwan</a></li>
@@ -282,8 +282,7 @@
         </nav></div>
           
         </div>
-        <!-- There is no copyright. use as you wish -->
-        <div class="copyright" id="copyright">© 2025 Trent:) & Milkysheep & Poorbear . All Rights Reserved.</div>
+        <div class="copyright" id="copyright">© 2018 - 2025 Trent:) & Milkysheep & Poorbear . All Rights Reserved.</div>
       </div>
     </footer>
   </body>
