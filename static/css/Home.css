@@ -994,6 +994,136 @@ button {
   height: 90px;
 }
 
+.Sponsor-1 {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: hidden;
+  position: relative;
+  height: 100vh;
+  top: -240px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255),
+    rgb(255, 255, 255) 20%,
+    rgb(255, 255, 255) 80%,
+    rgb(255, 255, 255)
+  );
+}
+
+@keyframes scrollRight {
+  to {
+    left: calc(100%);
+  }
+}
+
+.item-1 {
+  width: 200px;
+  height: 100px;
+  background-color: none;
+  border-radius: 6px;
+  position: absolute;
+  left: -200px;
+  animation-name: scrollRight;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item9 {
+  animation-delay: calc(30s / 8 * 8 * -1);
+}
+
+.item9 img {
+  position: relative;
+  top: 25px;
+  width: 195px;
+  height: 45px;
+}
+
+.item10 {
+  animation-delay: calc(30s / 8 * 7 * -1);
+}
+
+.item10 img {
+  position: relative;
+  top: 38px;
+  width: 180px;
+  height: 30px;
+}
+
+.item11 {
+  animation-delay: calc(30s / 8 * 6 * -1);
+}
+
+.item11 img {
+  position: relative;
+  left: 5px;
+  top: 28px;
+  width: 190px;
+  height: 45px;
+}
+
+.item12 {
+  animation-delay: calc(30s / 8 * 5 * -1);
+}
+
+.item12 img {
+  position: relative;
+  top: 10px;
+  left: 6px;
+  width: 190px;
+  height: 70px;
+}
+
+.item13 {
+  animation-delay: calc(30s / 8 * 4 * -1);
+}
+
+.item13 img {
+  position: relative;
+  top: -65px;
+  left: -50px;
+  width: 300px;
+  height: 230px;
+}
+
+.item14 {
+  animation-delay: calc(30s / 8 * 3 * -1);
+}
+
+.item14 img {
+  position: relative;
+  top: 33px;
+  left: 5px;
+  width: 190px;
+  height: 50px;
+}
+
+.item15 {
+  animation-delay: calc(30s / 8 * 2 * -1);
+}
+
+.item15 img {
+  position: relative;
+  top: 10px;
+  left: 50px;
+  width: 100px;
+  height: 80px;
+}
+
+.item16 {
+  animation-delay: calc(30s / 8 * 1 * -1);
+}
+
+.item16 img {
+  position: relative;
+  top: 10px;
+  left: 50px;
+  width: 80px;
+  height: 90px;
+}
+
 #wave {
   position: relative;
   top: -10px;
