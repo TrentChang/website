@@ -36,13 +36,21 @@ app = Flask(__name__)
 
 # 根路徑，渲染 HTML 模板
 @app.route('/')
+def index():
+    return render_template('Home.html')
+
+# Example additional routes
+@app.route('/home')
 def home():
     return render_template('Home.html')
 
 @app.route('/donate')
 def donate():
-    return render_template('Dondate.html')
+    return render_template('Donate.html')
 
+@app.route('/robots')
+def robots():
+    return render_template('Robots.html')
 # @app.route('/login', methods=['GET', 'POST'])
 # def login():
 #     if request.method == 'GET':
