@@ -32,7 +32,7 @@
   width: 100%; /* Ensure it spans the full width */
   padding: 1em;
   height: 85px; /* Height of your navbar */
-  line-height: 70px;
+  line-height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +47,7 @@
   width: 350px;
 }
 
-.txt-rotate {
+#txt-rotate {
   font-size: 50px;
   letter-spacing: 0.01em;
   font-weight: 600;
@@ -89,7 +89,6 @@
 .nav-links li a:hover {
   background: #4f4f4f;
   border-radius: 5px;
-  font-weight: 600;
 }
 .nav-links .mobile-item {
   display: none;
@@ -164,7 +163,6 @@
 }
 .row .mega-links li a:hover {
   color: #ffffff;
-  font-weight: 600;
 }
 .wrapper .btn {
   color: #000000;
@@ -363,10 +361,6 @@ main .content {
   inset: auto;
   animation: none; /* Remove animation timeline */
   background-color: initial;
-}
-
-body .content {
-  text-align: center; /* Center text inside .content */
 }
 
 #Home {
@@ -588,13 +582,12 @@ body .content {
 #All {
   z-index: 2;
   opacity: 0.5;
-  margin-top: -4px;
   position: absolute;
   top: 90px;
-  left: 30px;
+  left: 80px;
   bottom: 0;
-  width: 50%;
-  height: 55%;
+  width: 45%;
+  height: 49%;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
@@ -689,135 +682,6 @@ button {
   outline: none;
   border: none;
   background: transparent;
-}
-
-@keyframes animate-in {
-  from {
-    opacity: 0.2;
-    scale: 0.8;
-    translate: 0 10%;
-  }
-}
-
-.photo {
-  animation: animate-in ease-in both;
-  animation-timeline: view();
-  animation-range: entry 25% cover calc(50% - 10vh);
-}
-
-@layer components {
-  ul.photos {
-    display: flex;
-    flex-direction: column;
-    padding: 1em 0;
-    gap: 1.3em;
-  }
-
-  .photo {
-    transform-origin: 50% 100%;
-    border-radius: 1em;
-    overflow: hidden;
-
-    display: flex;
-    align-items: end;
-    width: min-content;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .photo img {
-    display: block;
-    width: auto;
-    height: 75vmin;
-    max-height: 20em;
-  }
-
-  li:nth-child(5n),
-  li:nth-child(7n + 3),
-  li:nth-child(3n) {
-    grid-row: span 2;
-    grid-column: span 2;
-  }
-}
-
-@layer reset {
-  *,
-  *:after,
-  *:before {
-    box-sizing: border-box;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  ul[class] {
-    list-style: none;
-  }
-}
-
-#Departments {
-  background-color: #080a1c;
-}
-
-#depicon,
-#depicon2,
-#depicon3 {
-  position: relative;
-  margin-top: 30px;
-  width: 125px;
-  height: 115px;
-}
-
-.photos {
-  position: absolute;
-  left: 38%;
-  top: 120px;
-}
-
-#ee {
-  color: white;
-  font-weight: 700;
-  font-size: 60px;
-  position: absolute;
-  top: 170px;
-  left: 48%;
-}
-
-#me {
-  color: white;
-  font-weight: 700;
-  font-size: 60px;
-  position: absolute;
-  top: 345px;
-  left: 48%;
-}
-
-#sp {
-  color: white;
-  font-weight: 700;
-  font-size: 60px;
-  position: absolute;
-  top: 515px;
-  left: 48%;
-}
-
-#vertical-line {
-  height: 500px;
-  border-left: solid 10px white;
-  position: absolute;
-  left: 35%;
-  top: 125px;
-}
-
-#Departments h2 {
-  color: white;
-  text-align: center;
-  font-size: 70px;
-  position: absolute;
-  top: 285px;
-  left: 3%;
 }
 
 *,
@@ -1053,10 +917,6 @@ html {
   html {
     font-size: 14px;
   }
-}
-
-body {
-  background: var(--background);
 }
 
 .container {

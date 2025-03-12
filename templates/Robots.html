@@ -38,7 +38,15 @@
             src="{{ url_for('static', filename='images/teamicon4.png') }}"
             class="logo-image"
           />
-          <a href="{{url_for('home')}}#Home">ROBOMANIA</a>
+          <a href="{{url_for('home')}}#HOME">
+            <span
+            class="txt-rotate"
+            id="txt-rotate"
+            data-period="2000"
+            data-rotate='[ "ROBOMANIA"]'>
+            </span>
+            <script src="{{url_for('static', filename='js/text-type.js')}}"></script>
+          </a>
         </div>
         <input type="radio" name="slider" id="menu-btn" />
         <input type="radio" name="slider" id="close-btn" />
@@ -132,9 +140,9 @@
           <script src="{{ url_for('static', filename='js/Robots.js') }}"></script>        
         </section>
         <a href="{{ url_for('donate') }}#donate">
-            <div id="donatebutton" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: rgb(95, 127, 255); color: white; border-radius: 32px; position: fixed; right: 18px; bottom: 18px; box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px; z-index: 9999; cursor: pointer; font-weight: 600; transition: 0.25s; transform: scale(1);">
-              <img src="https://img.icons8.com/?size=100&id=igliuy55hqkp&format=png&color=ffffff" width="45px" height="45px" >
-            </div>
+          <div id="donatebutton" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: rgb(95, 127, 255); color: white; border-radius: 32px; position: fixed; right: 18px; bottom: 18px; box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px; z-index: 9999; cursor: pointer; font-weight: 600; transition: 0.25s; transform: scale(1);">
+            <img src="https://img.icons8.com/?size=100&id=igliuy55hqkp&format=png&color=ffffff" width="40px" height="40px" >
+          </div>
           </a>
     </main>
     <footer>

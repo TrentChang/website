@@ -13,21 +13,35 @@
       href="{{ url_for('static', filename='css/Home.css') }}"
     />
     <script
+      async
       src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://threejs.org/build/three.js"></script>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+        }
+			}
+		</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.min.js"></script>
     <nav>
       <div class="wrapper">
         <div class="logo">
-          <a href="#">
+          <a href="{{ url_for('home') }}#Home">
             <img
             src="{{ url_for('static', filename='images/teamicon4.png') }}"
             class="logo-image"
           />
-          <a href="#">
+          <a href="{{url_for('home')}}#HOME">
             <span
             class="txt-rotate"
+            id="txt-rotate"
             data-period="2000"
             data-rotate='[ "ROBOMANIA"]'>
             </span>
@@ -40,19 +54,19 @@
           <label for="close-btn" class="btn close-btn"
             ><i class="fas fa-times"></i
           ></label>
-          <li><a href="#">Home</a></li>
+          <li><a href="{{ url_for('home') }}#Home">HOME</a></li>
           <li>
-            <a href="#About" class="desktop-item">ABOUT</a>
+            <a href="{{ url_for('home') }}#About" class="desktop-item">ABOUT</a>
             <input type="checkbox" id="showDrop" />
             <label for="showDrop" class="mobile-item">ABOUT</label>
             <ul class="drop-menu">
-              <li><a href="#Established">Established</a></li>
-              <li><a href="#Departments">Departments</a></li>
-              <li><a href="#Sponsor">Sponsor</a></li>
+              <li><a href="{{ url_for('home') }}#Established">Established</a></li>
+              <li><a href="{{ url_for('home') }}#Departments">Departments</a></li>
+              <li><a href="{{ url_for('home') }}#Sponsor">Sponsor</a></li>
             </ul>
           </li>
           <li>
-            <a href="#Learnmore" class="desktop-item">SEASONS/ROBOTS</a>
+            <a href="{{url_for('home')}}#Learnmore" class="desktop-item">SEASONS/ROBOTS</a>
             <input type="checkbox" id="showMega" />
             <label for="showMega" class="mobile-item"></label>
             <div class="mega-box">
@@ -118,7 +132,7 @@
       </div>
     </nav>
     <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
-  </head>
+  </html>
   <body>
     <main>
       <section id="Home" class="section">
@@ -171,16 +185,6 @@
         </section>  
       </section>
       <section id="Departments" class="section">
-        <ul class="photos">
-          <li class="photo"><img id="depicon3" src="{{url_for('static', filename='images/depicon3.png')}}" draggable="false"></li>
-          <li class="photo"><img id="depicon2" src="{{url_for('static', filename='images/depicon2.png')}}" draggable="false"></li>
-          <li class="photo"><img id="depicon" src="{{url_for('static', filename='images/depicon.png')}}" draggable="false"></li>
-        </ul>
-        <p id="ee">Electrical Engineering</p>
-        <p id="me">Mechanical Engineering</p>
-        <p id="sp">Strategy & Public Relations</p>
-        <h2>Team <br>Departments</h2>
-        <div id="vertical-line"></div>
       </section>
       <section id="Sponsor" class="section">
         <h1>OUR SPONSORS</h1>
@@ -203,7 +207,7 @@
       </section>
       <a href="{{ url_for('donate') }}#donate">
         <div id="donatebutton" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: rgb(95, 127, 255); color: white; border-radius: 32px; position: fixed; right: 18px; bottom: 18px; box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px; z-index: 9999; cursor: pointer; font-weight: 600; transition: 0.25s; transform: scale(1);">
-          <img src="https://img.icons8.com/?size=100&id=igliuy55hqkp&format=png&color=ffffff" width="45px" height="45px" >
+          <img src="https://img.icons8.com/?size=100&id=igliuy55hqkp&format=png&color=ffffff" width="40px" height="40px" >
         </div>
       </a>
     </main> 

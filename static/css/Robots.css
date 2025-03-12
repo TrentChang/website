@@ -37,7 +37,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background-color: rgb(8, 10, 28);
+  background-color: #080a1c;
   font-weight: 500;
 }
 
@@ -47,6 +47,12 @@
   width: 350px;
 }
 
+.txt-rotate {
+  font-size: 50px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
 .wrapper .logo a {
   display: flex;
   color: #ffffff;
@@ -54,7 +60,6 @@
   text-decoration: none;
   align-items: center; /* Align the image and text inside the anchor tag */
   font-weight: 500;
-  letter-spacing: 0.07em;
 }
 
 .wrapper a img {
@@ -84,7 +89,6 @@
 .nav-links li a:hover {
   background: #4f4f4f;
   border-radius: 5px;
-  font-weight: 600;
 }
 .nav-links .mobile-item {
   display: none;
@@ -159,7 +163,6 @@
 }
 .row .mega-links li a:hover {
   color: #ffffff;
-  font-weight: 600;
 }
 .wrapper .btn {
   color: #000000;
@@ -297,6 +300,7 @@
 nav input {
   display: none;
 }
+
 /*section*/
 #test {
   height: 500vh;

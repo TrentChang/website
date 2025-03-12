@@ -38,7 +38,15 @@
             src="{{ url_for('static', filename='images/teamicon4.png') }}"
             class="logo-image"
           />
-          <a href="{{ url_for('home') }}#Home">ROBOMANIA</a>
+          <a href="{{url_for('home')}}#HOME">
+            <span
+            class="txt-rotate"
+            id="txt-rotate"
+            data-period="2000"
+            data-rotate='[ "ROBOMANIA"]'>
+            </span>
+            <script src="{{url_for('static', filename='js/text-type.js')}}"></script>
+          </a>
         </div>
         <input type="radio" name="slider" id="menu-btn" />
         <input type="radio" name="slider" id="close-btn" />
