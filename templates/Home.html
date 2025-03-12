@@ -13,23 +13,10 @@
       href="{{ url_for('static', filename='css/Home.css') }}"
     />
     <script
-      async
       src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://threejs.org/build/three.js"></script>
-    <script type="importmap">
-			{
-				"imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
-          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
-        }
-			}
-		</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.min.js"></script>
     <nav>
       <div class="wrapper">
         <div class="logo">
@@ -38,7 +25,14 @@
             src="{{ url_for('static', filename='images/teamicon4.png') }}"
             class="logo-image"
           />
-          <a href="#">ROBOMANIA</a>
+          <a href="#">
+            <span
+            class="txt-rotate"
+            data-period="2000"
+            data-rotate='[ "ROBOMANIA"]'>
+            </span>
+            <script src="{{url_for('static', filename='js/text-type.js')}}"></script>
+          </a>
         </div>
         <input type="radio" name="slider" id="menu-btn" />
         <input type="radio" name="slider" id="close-btn" />
@@ -46,7 +40,7 @@
           <label for="close-btn" class="btn close-btn"
             ><i class="fas fa-times"></i
           ></label>
-          <li><a href="#">HOME</a></li>
+          <li><a href="#">Home</a></li>
           <li>
             <a href="#About" class="desktop-item">ABOUT</a>
             <input type="checkbox" id="showDrop" />
@@ -144,7 +138,7 @@
             <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
             <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
             <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="#080a1c" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(8,10,28,1)" />
             </g>
             </svg>
           </div>
@@ -200,20 +194,10 @@
           <div class="item item7"><img src="{{url_for('static', filename='images/nehs.png')}}"></div>
           <div class="item item8"><img src="https://www.firstinspires.org/sites/default/files/2024-banner/frc_reefscape.gif"></div>
         </div>
-        <div class="Sponsor-1">
-          <div class="item-1 item9"><img src="{{url_for('static', filename='images/coagent.png')}}"></div>
-          <div class="item-1 item10"><img src="{{url_for('static', filename='images/corning.png')}}"></div>
-          <div class="item-1 item11"><img src="{{url_for('static', filename='images/ctsp.png')}}"></div>
-          <div class="item-1 item12"><img src="{{url_for('static', filename='images/pmc.png')}}"></div>
-          <div class="item-1 item13"><img src="{{url_for('static', filename='images/multicraft.png')}}"></div>
-          <div class="item-1 item14"><img src="{{url_for('static', filename='images/wtools.png')}}"></div>
-          <div class="item-1 item15"><img src="{{url_for('static', filename='images/nehs.png')}}"></div>
-          <div class="item-1 item16"><img src="https://www.firstinspires.org/sites/default/files/2024-banner/frc_reefscape.gif"></div>
-        </div>
         <p>"Thanks to all the sponsors for supporting us"</p>
         
       </section>
-      <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 130" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(8, 10, 28, 1)" offset="0%"></stop><stop stop-color="rgba(8, 10, 28, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,52L30,47.7C60,43,120,35,180,39C240,43,300,61,360,62.8C420,65,480,52,540,39C600,26,660,13,720,17.3C780,22,840,43,900,56.3C960,69,1020,74,1080,78C1140,82,1200,87,1260,73.7C1320,61,1380,30,1440,15.2C1500,0,1560,0,1620,4.3C1680,9,1740,17,1800,36.8C1860,56,1920,87,1980,86.7C2040,87,2100,56,2160,45.5C2220,35,2280,43,2340,47.7C2400,52,2460,52,2520,54.2C2580,56,2640,61,2700,69.3C2760,78,2820,91,2880,91C2940,91,3000,78,3060,69.3C3120,61,3180,56,3240,65C3300,74,3360,95,3420,104C3480,113,3540,108,3600,97.5C3660,87,3720,69,3780,54.2C3840,39,3900,26,3960,32.5C4020,39,4080,65,4140,75.8C4200,87,4260,82,4290,80.2L4320,78L4320,130L4290,130C4260,130,4200,130,4140,130C4080,130,4020,130,3960,130C3900,130,3840,130,3780,130C3720,130,3660,130,3600,130C3540,130,3480,130,3420,130C3360,130,3300,130,3240,130C3180,130,3120,130,3060,130C3000,130,2940,130,2880,130C2820,130,2760,130,2700,130C2640,130,2580,130,2520,130C2460,130,2400,130,2340,130C2280,130,2220,130,2160,130C2100,130,2040,130,1980,130C1920,130,1860,130,1800,130C1740,130,1680,130,1620,130C1560,130,1500,130,1440,130C1380,130,1320,130,1260,130C1200,130,1140,130,1080,130C1020,130,960,130,900,130C840,130,780,130,720,130C660,130,600,130,540,130C480,130,420,130,360,130C300,130,240,130,180,130C120,130,60,130,30,130L0,130Z"></path></svg>
+      <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 130" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="#080a1c" offset="0%"></stop><stop stop-color="#080a1c" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,52L30,47.7C60,43,120,35,180,39C240,43,300,61,360,62.8C420,65,480,52,540,39C600,26,660,13,720,17.3C780,22,840,43,900,56.3C960,69,1020,74,1080,78C1140,82,1200,87,1260,73.7C1320,61,1380,30,1440,15.2C1500,0,1560,0,1620,4.3C1680,9,1740,17,1800,36.8C1860,56,1920,87,1980,86.7C2040,87,2100,56,2160,45.5C2220,35,2280,43,2340,47.7C2400,52,2460,52,2520,54.2C2580,56,2640,61,2700,69.3C2760,78,2820,91,2880,91C2940,91,3000,78,3060,69.3C3120,61,3180,56,3240,65C3300,74,3360,95,3420,104C3480,113,3540,108,3600,97.5C3660,87,3720,69,3780,54.2C3840,39,3900,26,3960,32.5C4020,39,4080,65,4140,75.8C4200,87,4260,82,4290,80.2L4320,78L4320,130L4290,130C4260,130,4200,130,4140,130C4080,130,4020,130,3960,130C3900,130,3840,130,3780,130C3720,130,3660,130,3600,130C3540,130,3480,130,3420,130C3360,130,3300,130,3240,130C3180,130,3120,130,3060,130C3000,130,2940,130,2880,130C2820,130,2760,130,2700,130C2640,130,2580,130,2520,130C2460,130,2400,130,2340,130C2280,130,2220,130,2160,130C2100,130,2040,130,1980,130C1920,130,1860,130,1800,130C1740,130,1680,130,1620,130C1560,130,1500,130,1440,130C1380,130,1320,130,1260,130C1200,130,1140,130,1080,130C1020,130,960,130,900,130C840,130,780,130,720,130C660,130,600,130,540,130C480,130,420,130,360,130C300,130,240,130,180,130C120,130,60,130,30,130L0,130Z"></path></svg>
       <section id="Learnmore" class="section">
         <a href="{{url_for('robots')}}#test"><span id='modelbox' class="box">Learn more</span></a>
       </section>
@@ -291,7 +275,7 @@
         </nav></div>
           
         </div>
-        <div class="copyright" id="copyright">© 2018 - 2025 Trent:) & Milkysheep & Poorbear . All Rights Reserved.</div>
+        <div class="copyright" id="copyright">© 2018 - 2025 Robomania. All Rights Reserved.</div>
       </div>
     </footer>
   </body>

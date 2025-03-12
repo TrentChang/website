@@ -298,8 +298,23 @@ nav input {
   display: none;
 }
 /*section*/
+#test {
+  height: 500vh;
+  background: #000;
+}
 
-/*donate button */
+html {
+  height: 100vh;
+}
+
+canvas {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50vw;
+  max-height: 50vh;
+}
 
 /*footer*/
 * {
