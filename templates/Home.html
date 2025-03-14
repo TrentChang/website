@@ -35,11 +35,11 @@
         <div class="logo">
           <a href="{{ url_for('home') }}#Home">
             <img
-            src="{{ url_for('static', filename='images/teamicon4.png') }}"
+            src="{{ url_for('static', filename='images/teamicon5.png') }}"
             class="logo-image"
           />
           <a href="{{url_for('home')}}#HOME">
-            <span
+            <span     
             class="txt-rotate"
             id="txt-rotate"
             data-period="2000"
@@ -54,11 +54,11 @@
           <label for="close-btn" class="btn close-btn"
             ><i class="fas fa-times"></i
           ></label>
-          <li><a href="{{ url_for('home') }}#Home">HOME</a></li>
+          <li><a href="{{ url_for('home') }}#Home">Home</a></li>
           <li>
-            <a href="{{ url_for('home') }}#About" class="desktop-item">ABOUT</a>
+            <a href="{{ url_for('home') }}#About" class="desktop-item">About</a>
             <input type="checkbox" id="showDrop" />
-            <label for="showDrop" class="mobile-item">ABOUT</label>
+            <label for="showDrop" class="mobile-item">About</label>
             <ul class="drop-menu">
               <li><a href="{{ url_for('home') }}#Established">Established</a></li>
               <li><a href="{{ url_for('home') }}#Departments">Departments</a></li>
@@ -66,7 +66,7 @@
             </ul>
           </li>
           <li>
-            <a href="{{url_for('home')}}#Learnmore" class="desktop-item">SEASONS/ROBOTS</a>
+            <a href="{{url_for('home')}}#Learnmore" class="desktop-item">Robots</a>
             <input type="checkbox" id="showMega" />
             <label for="showMega" class="mobile-item"></label>
             <div class="mega-box">
@@ -92,9 +92,9 @@
             </div>
           </li>
           <li>
-            <a class="desktop-item">MEDIA</a>
+            <a class="desktop-item">Media</a>
             <input type="checkbox" id="showDrop" />
-            <label for="showDrop" class="mobile-item">MEDIA</label>
+            <label for="showDrop" class="mobile-item">Media</label>
             <ul class="drop-menu">
               <li>
                 <a
@@ -124,7 +124,7 @@
               </li>
             </ul>
           </li>
-          <li><a>FEEDBACK</a></li>
+          <li><a>Feedback</a></li>
         </ul>
         <label for="menu-btn" class="btn menu-btn"
           ><i class="fas fa-bars"></i
@@ -137,26 +137,30 @@
     <main>
       <section id="Home" class="section">
         <div class="content">
-          <h2>WE ' RE <br /> FRC TEAM</h2>     
-          <h1>7636 <br /> ROBOMANIA</h1>
-          <p>"A group of students who are passionate about robotics"</p>      
-          <model-viewer id="threedd" alt="3D model" src="{{ url_for('static', filename='models/zelus.glb')}}" auto-play camera-controls disable-zoom disable-pancamera-orbit="45deg 75deg 2m"camera-target="0m 0m 0m" field-of-view="30deg" orientation="0deg 0deg 0deg"></model-viewer>
+          <h2>WE ' RE TEAM 7636 </h2>     
+          <h1>ROBOMANIA</h1>
+          <div class="counter">
+            <div class="counter1"> + <br><h4>members</h4></div>
+            <div class="counter2"><br><h4>established from 2018 to ...</h4></div>
+          </div> 
+          <p>"A group of students who are passionate about robotics"</p>
+          <model-viewer class="model-viewer-size" id="zelus" camera-controls touch-action="pan-y" alt="3D model" src="{{ url_for('static', filename='models/zelus.glb')}}" auto-play disable-zoom disable-pan camera-orbit="45deg 75deg 2m" camera-target="0m 0m 0m" field-of-view="30deg" orientation="0deg 0deg 0deg" interaction-prompt="none"></model-viewer>  
           <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-          <div class='waveshead'>
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(8,10,28,1)" />
-            </g>
-            </svg>
-          </div>
       </section>
+      <div class='waveshead'>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgb(153, 153, 153, 0.7)" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgb(102, 102, 102, 0.7)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgb(102, 102, 102, 0.7)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(8,10,28,1)" />
+        </g>
+        </svg>
+      </div>
       <section id="About" class="section"> 
         <section class="reveal_text">
           <h2>
@@ -170,9 +174,7 @@
       </section>
       <section id="Established" class="section">
         <section class="reveal_text">
-          <h2>
-            ROBOMANIA
-          </h2>
+          <h1>ROBOMANIA</h1>
           <p id="up">
             <span>Established in 2018 Taichung, Taiwan with just 13 members, <b>Robomania</b> have grown into a diverse team, representing various ages, genders, and nationalities. Our goal is to promote FIRST to students and the public in order to inspire individuals to learn more about STEAM.</span>
           </p>

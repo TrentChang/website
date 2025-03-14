@@ -26,7 +26,7 @@
   opacity: 0;
 }
 .wrapper {
-  position: fixed; /* Keep navbar fixed at the top */
+  position: absolute; /* Keep navbar fixed at the top */
   top: 0;
   left: 0;
   width: 100%; /* Ensure it spans the full width */
@@ -37,25 +37,25 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background-color: #080a1c;
+  background-color: none;
   font-weight: 500;
 }
 
 .wrapper .logo {
   display: flex;
   align-items: center; /* Align image and text vertically */
-  width: 350px;
+  width: 500px;
 }
 
 #txt-rotate {
   font-size: 50px;
-  letter-spacing: 0.01em;
-  font-weight: 600;
+  letter-spacing: 0.0001em;
+  font-weight: 900;
 }
 
 .wrapper .logo a {
   display: flex;
-  color: #ffffff;
+  color: #000000;
   font-size: 50px;
   text-decoration: none;
   align-items: center; /* Align the image and text inside the anchor tag */
@@ -78,7 +78,7 @@
   top: 70px;
 }
 .nav-links li a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-size: 19.5px;
   font-weight: 500;
@@ -87,7 +87,7 @@
   transition: all 0.3s ease;
 }
 .nav-links li a:hover {
-  background: #4f4f4f;
+  background: #a9a9a9;
   border-radius: 5px;
 }
 .nav-links .mobile-item {
@@ -96,13 +96,13 @@
 .nav-links .drop-menu {
   position: absolute;
   border-radius: 5px;
-  background: rgb(8, 10, 28);
+  background: #a9a9a9;
   width: 180px;
   line-height: 45px;
   top: 85px;
   opacity: 0;
   visibility: hidden;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 10px #a9a9a9;
 }
 .nav-links li:hover .drop-menu {
   opacity: 1;
@@ -137,7 +137,7 @@
 }
 .mega-box .content {
   width: 600px;
-  background: rgb(8, 10, 28);
+  background: #a9a9a9;
   border-radius: 5px;
   padding: 1em;
   display: flex;
@@ -155,14 +155,14 @@
 .row .mega-links li a {
   padding: 0px;
   padding: 0 20px;
-  color: #ffffff;
+  color: #000000;
   font-size: (0, 0, 0) x;
   display: block;
   border-radius: 10px;
   text-align: left;
 }
 .row .mega-links li a:hover {
-  color: #ffffff;
+  color: #000000;
 }
 .wrapper .btn {
   color: #000000;
@@ -243,7 +243,7 @@
   }
   .nav-links .mobile-item {
     display: block;
-    color: #f2f2f2;
+    color: #000000;
     font-size: 20px;
     font-weight: 500;
     padding-left: 20px;
@@ -365,23 +365,23 @@ main .content {
 
 #Home {
   padding: 0;
-  background-color: hsla(243, 100%, 6%, 1);
-  background-image: radial-gradient(
-      at 18% 77%,
-      hsla(220, 31%, 8%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 100% 100%, hsla(220, 100%, 27%, 1) 0px, transparent 50%),
-    radial-gradient(at 13% 18%, hsla(220, 100%, 27%, 1) 0px, transparent 50%),
-    radial-gradient(at 14% 100%, hsla(243, 100%, 27%, 1) 0px, transparent 50%);
-  height: 130vh;
+  height: 108vh;
+}
+
+.model-viewer-size {
+  width: 900px;
+  height: 600px;
+  position: absolute;
+  top: 300px;
+  right: 100px;
 }
 
 .waveshead {
-  position: relative;
-  top: 850px;
+  position: absolute;
+  top: 680px;
   z-index: 5;
   text-align: center;
+  width: 100%;
 }
 
 .waves {
@@ -445,7 +445,7 @@ main .content {
   font-weight: 900;
   z-index: 1;
   text-align: left;
-  color: #ffffff;
+  color: #000000;
   transform: translateY(50px);
   animation: flowUp 1s ease-out forwards;
   animation-delay: 0.1s;
@@ -456,33 +456,94 @@ main .content {
   margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 300px;
+  top: 210px;
   left: 150px;
   font-size: 90px;
   font-weight: 900;
   z-index: 1;
   text-align: left;
-  color: #ffffff;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
+  color: #03185b;
 }
 
 #Home p {
   line-height: 1.3em;
-  margin: 0;
   padding-right: 20px; /* Space between text and image */
   position: absolute;
-  top: 580px;
+  top: 350px;
   left: 150px;
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
   z-index: 1;
   text-align: left;
-  color: #ffffff;
-  transform: translateY(50px);
-  animation: flowUp 1s ease-out forwards;
-  animation-delay: 0.1s;
+  color: #000000;
+}
+
+.counter {
+  font-family: "Robot", sans-serif;
+}
+
+.counter1 {
+  font-size: 70px;
+  font-weight: 700;
+  position: absolute;
+  top: 450px;
+  left: 150px;
+}
+
+.counter1 h4 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 5px;
+}
+
+.counter2 {
+  font-size: 70px;
+  font-weight: 700;
+  position: absolute;
+  top: 450px;
+  left: 400px;
+}
+
+.counter2 h4 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 5px;
+}
+
+@property --num1 {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --num2 {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 2018;
+}
+
+.counter1::before {
+  counter-reset: my-counter1 var(--num1);
+  content: counter(my-counter1);
+  animation: count1 3s ease-in-out forwards;
+}
+
+.counter2::before {
+  counter-reset: my-counter2 var(--num2);
+  content: counter(my-counter2);
+  animation: count2 2s ease-in-out forwards; /* Different duration as an example */
+}
+
+@keyframes count1 {
+  to {
+    --num1: 30;
+  }
+}
+
+@keyframes count2 {
+  to {
+    --num2: 2025;
+  } /* Different end value as an example */
 }
 
 #About {
@@ -549,6 +610,14 @@ main .content {
   background-color: #080a1c;
   width: 100%;
   height: 110vh;
+}
+
+#Established h1 {
+  position: absolute;
+  top: 70px;
+  left: 54%;
+  font-size: 110px;
+  color: #ffffff;
 }
 
 #Established h2 {
